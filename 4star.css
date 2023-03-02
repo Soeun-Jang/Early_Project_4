@@ -1,23 +1,47 @@
-.header_img{
+.header_img {
   background-color: green;
+  color: white;
   height: 350px;
-  margin-top: 60px;
   background-size: cover;
   background-position: center;
-  background-image:url("http://blog.gormey.com/wp-content/uploads/2021/09/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA-2021-09-23-%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB-11.30.08.png");
-  border-radius: 10px;
-  vertical-align:top;
+  background-image: url("https://www.agoda.com/wp-content/uploads/2019/01/Michelin-guide-restaurants-in-Asia-Featured-photo-Michelin-star-food.jpg");
+  vertical-align: top;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
+
 * {
   font-family: 'Gowun Dodum', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
+}
+
+.logo {
+  margin: 10px 0 10px 40px;
+  width: 80px;
+  height: 80px;
+}
+
+.banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.banner2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.login{
+  margin-right: 10px;
 }
