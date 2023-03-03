@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>미슐랭4스타</title>
   <link rel="stylesheet" href="detail.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
   <div class="banner">
     <img class="logo" src="https://i.ibb.co/0K00GQD/2023-03-02-5-53-43.png" alt="로고" border="0"></a>
     <div class="banner2">
-      <p class="login">로그인</p>
-      <p>회원가입</p>
+      <div class="logIn">
+        <span><a href="">로그인</a></span>
+        <span>|</span>
+        <span><a href="">회원가입</a></span>
+      </div>
     </div>
   </div>
   <div class="img-dummy">
@@ -32,7 +34,7 @@
     </div>
     <form>
       <div class="modal">
-        <div class="modal_body">Modal
+        <div class="modal_body">맛집 공유
           <div>
             <label>이미지</label>
             <input id="img" type="url" class="form-control" placeholder="이미지URL">
@@ -43,7 +45,7 @@
           </div>
           <div>
             <label>위치</label>
-            <input id="place" type="email" class="form-control" placeholder="name@example.com">
+            <input id="place" type="email" class="form-control" placeholder="가게 위치">
           </div>
           <div class="star_point">
             <label class="input-group-text" for="inputGroupSelect01">별점</label>
@@ -56,7 +58,7 @@
               <option value="5">⭐⭐⭐⭐⭐</option>
             </select>
           </div>
-          <button class="x-btn">평가하기</button>
+          <button class="x-btn">공유하기</button>
         </div>
       </div>
     </form>
