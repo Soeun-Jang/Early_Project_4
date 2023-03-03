@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  font-family: 'Gowun Dodum', sans-serif;
+  font-size: 30px;
+}
+.logo {
+  margin: 11px 0 10px 40px;
+  width: 80px;
+  height: 80px;
+}
+.banner {
+  background-color: whitesmoke;
+  height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 40px;
+}
+.banner2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+.login{
+  margin-right: 10px;
+}
+.img-dummy{
+  width: 700px;
+  height: 500px;
+  background-color: whitesmoke;
+
+  margin: auto;
+  padding-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: end;
+  padding-left: 20px;
+}
+.dummy-food{
+  height: 300px;
+  width: 680px;
+  
+  background-size: 100%;
+  background-position: center;
+  background-image: url("https://cdn-std-web-216-59.cdn-nhncommerce.com/dothegmal4_godomall_com/data/goods/21/06/22/1000000242/1000000242_detail_071.jpg");
+}
+.dummy-title{
+  
+}
+.dummy-place-menu{
+  
+}
+.dummy-time{
+  
+}
+.dummy-column{
+  display: flex;
+  flex-direction: column;
+  align-items: self-start;
+  justify-content: center;
+}
+.dummy-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
