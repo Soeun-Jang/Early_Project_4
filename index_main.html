@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="4star.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>미슐랭4스타</title>
+</head>
+
+<body>
+  <section class="banner">
+    <a href=""><img class="logo" src="https://i.ibb.co/0K00GQD/2023-03-02-5-53-43.png" alt="로고"></a>
+    <!-- <h1 class="logo"><a href="">Michelin4Star</a></h1> -->
+    <div class="logIn">
+      <span><a href="">로그인</a></span>
+      <span>|</span>
+      <span><a href="">회원가입</a></span>
+    </div>
+  </section>
+  <section class="slide">
+    <ul class="slideul">
+      <li class="slide1"></li>
+      <li class="slide2"></li>
+      <li class="slide3"></li>
+    </ul>
+    <p id="left" class="xi-angle-left"></p>
+    <p id="right" class="xi-angle-right"></p>
+  </section>
+  <section class="middle">
+    <div class="middle2">
+      <div class="sub_title">
+        <h1>추천 맛집</h1>
+        <button class="add">추가하기</button>
+      </div>
+      <span class="part"></span>
+      <div class="list_box">
+        <ul class="list">
+          <li>
+            <a href="" class="img_box">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjlfMjkg%2FMDAxNjcyMjQyNTQxMDYz.cjeYP-X51bbWRo0YwygenDxe1w_MifU1UBWoprtp0jsg.emgS9lyuUGexJkKBilR6Sm2_V9IaOURQvc3wYzJEU2og.JPEG.parksang1213%2FIMG_5251.JPG&type=ofullfill340_600_png"
+                class="card-img-top">
+            </a>
+            <p class="res_name">restaurant</p>
+          </li>
+          <li>
+            <a href="" class="img_box">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjZfMjM1%2FMDAxNjY2NzYwMzA2MzIz.uU8VzfuUotaEre_YqkNpFR6zVPRbK4TOxCZFd1HD-uYg.114YckwrVrFMGFFKZA2XabKDmsxe5uZNGZECQCBtX0gg.JPEG.minya0301%2FIMG_2703.jpg&type=a340"
+                class="card-img-top">
+            </a>
+            <p class="res_name">restaurant</p>
+          </li>
+          <li>
+            <a href="" class="img_box">
+              <img
+                src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220930_265%2F1664525112441lAp7M_JPEG%2FF8C70622-DDF2-4C35-A67F-7B13C153F037.jpeg&type=a340"
+                class="card-img-top">
+            </a>
+            <p class="res_name">restaurant</p>
+          </li>
+          <li>
+            <a href="" class="img_box">
+              <img
+                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjlfMjkg%2FMDAxNjcyMjQyNTQxMDYz.cjeYP-X51bbWRo0YwygenDxe1w_MifU1UBWoprtp0jsg.emgS9lyuUGexJkKBilR6Sm2_V9IaOURQvc3wYzJEU2og.JPEG.parksang1213%2FIMG_5251.JPG&type=ofullfill340_600_png"
+                class="card-img-top">
+            </a>
+            <p class="res_name">restaurant</p>
+          </li>
+          <!-- <li>
+                        <a href="" class="img_box">
+                            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjZfMjM1%2FMDAxNjY2NzYwMzA2MzIz.uU8VzfuUotaEre_YqkNpFR6zVPRbK4TOxCZFd1HD-uYg.114YckwrVrFMGFFKZA2XabKDmsxe5uZNGZECQCBtX0gg.JPEG.minya0301%2FIMG_2703.jpg&type=a340"
+                                class="card-img-top">
+                        </a>
+                        <p class="res_name">restaurant</p>
+                    </li> -->
+        </ul>
+      </div>
+    </div>
+  </section>
+  <section class="bottom">
+    <button class="more">펼쳐 보기</button>
+  </section>
+  <script>
+    setInterval(function () {
+      $('.slideul').animate({ marginLeft: '-1200px' }, function () {
+        $('.slideul').css('margin-left', '0px');
+        $('.slideul>li').eq(0).appendTo('.slideul');
+      });
+    }, 10000)
+
+    $('#left').click(function () {
+      $('.slideul>li:last-child').prependTo('.slideul');
+      $('.slideul').css('margin-left', '-1200px');
+      $('.slideul').animate({ marginLeft: '0px' }, 500);
+    });
+
+    $('#right').click(function () {
+      $('.slideul').animate({ marginLeft: '-1200px' }, 500, function () {
+        $('.slideul').css('margin-left', '0px');
+        $('.slideul>li').eq(0).appendTo('.slideul');
+      });
+    });
+  </script>
+</body>
+
+</html>
