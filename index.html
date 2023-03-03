@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="4star.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
   </style>
@@ -13,17 +15,50 @@
 </head>
 
 <body>
-  <div class="banner">
-    <img class="logo" src="https://i.ibb.co/0K00GQD/2023-03-02-5-53-43.png" alt="로고" border="0"></a>
-    <div class="banner2">
-      <p class="login">로그인</p>
-      <p>회원가입</p>
-      <p>테스트</p>
+  <section class="banner">
+    <a href=""><img class="logo" src="https://i.ibb.co/0K00GQD/2023-03-02-5-53-43.png" alt="로고"></a>
+    <!-- <h1 class="logo"><a href="">Michelin4Star</a></h1> -->
+    <div class="banner_btns">
+      <div class="logIn">
+        <span><a href="">로그인</a></span>
+        <span>|</span>
+        <span><a href="">회원가입</a></span>
+      </div>
+      <button class="add">추가하기</button>
     </div>
-  </div>
-  <div class="header_img">
-    상단 배경이미지
-  </div>
+  </section>
+  <section class="slide">
+    <ul class="slideul">
+      <li class="slide1"></li>
+      <li class="slide2"></li>
+      <li class="slide3"></li>
+    </ul>
+    <p id="left" class="xi-angle-left"></p>
+    <p id="right" class="xi-angle-right"></p>
+  </section>
+  <section class="middle"></section>
+  <section class="bottom"></section>
+  <script>
+    setInterval(function () {
+      $('.slideul').animate({ marginLeft: '-1200px' }, function () {
+        $('.slideul').css('margin-left', '0px');
+        $('.slideul>li').eq(0).appendTo('.slideul');
+      });
+    }, 10000)
+
+    $('#left').click(function () {
+      $('.slideul>li:last-child').prependTo('.slideul');
+      $('.slideul').css('margin-left', '-1200px');
+      $('.slideul').animate({ marginLeft: '0px' }, 500);
+    });
+
+    $('#right').click(function () {
+      $('.slideul').animate({ marginLeft: '-1200px' }, 500, function () {
+        $('.slideul').css('margin-left', '0px');
+        $('.slideul>li').eq(0).appendTo('.slideul');
+      });
+    });
+  </script>
 </body>
 
 </html>
