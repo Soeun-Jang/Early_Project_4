@@ -24,18 +24,68 @@
     <div class="dummy-food">
     </div>
     <div class="dummy-column">
-      <div>
-        가게명</div>
-      <div>
-        위치 메뉴</div>
+      <div>가게명</div>
+      <div>위치 메뉴</div>
       <div>영업시간</div>
-    </div>
-
-    <div class="dummy-row">
       <div>좋아요 ★★★★★</div>
-      <div>평가하기</div>
+      <button class="btn-open-popup">평가하기</button>
     </div>
+    <form>
+      <div class="modal">
+        <div class="modal_body">Modal
+          <div>
+            <label>이미지</label>
+            <input id="img" type="url" class="form-control" placeholder="이미지URL">
+          </div>
+          <div>
+            <label>가게명 </label>
+            <input id="sikdang" type="text" class="form-control" placeholder="가게명">
+          </div>
+          <div>
+            <label>위치</label>
+            <input id="place" type="email" class="form-control" placeholder="name@example.com">
+          </div>
+          <div class="star_point">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="star">
+              <option selected>-- 선택하기 --</option>
+              <option value="1">⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+          </div>
+          <button class="x-btn">평가하기</button>
+        </div>
+      </div>
+    </form>
+    <script>
+      const body = document.querySelector('body');
+      const modal = document.querySelector('.modal');
+      const btnOpenPopup = document.querySelector('.btn-open-popup');
+      const xbtn = document.querySelector('.x-btn');
 
+      //body, modal class, btn-open-popup class 요소를 참조하는 변수 선언
+      btnOpenPopup.addEventListener('click', () => {
+        modal.classList.toggle('show');
+
+        if (modal.classList.contains('show')) {
+          body.style.overflow = 'hidden';
+        }
+      });
+
+      modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+          modal.classList.toggle('show');
+
+          if (!modal.classList.contains('show')) {
+            body.style.overflow = 'auto';
+          }
+        }
+      });
+
+    </script>
 
 </body>
 
