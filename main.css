@@ -450,6 +450,7 @@ input[required]+label:after {
     position: absolute;
     top: 0;
     left: 0;
+    display: none;
 }
 .btnBox {
     width: 100%;
