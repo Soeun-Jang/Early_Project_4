@@ -8,17 +8,17 @@
     text-decoration: none;
 }
 
-.banner {
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-    padding: 10px;
-}
-
 html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(230, 230, 230, 1);
+}
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px 10px 30px;
 }
 
 .logo {
@@ -27,8 +27,7 @@ html, body {
 }
 
 .logIn {
-    font-size: 25px;
-    margin-bottom: 20px;
+    font-size: 28px;
 }
 
 .add {
