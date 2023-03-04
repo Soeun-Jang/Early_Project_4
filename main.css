@@ -9,7 +9,8 @@
     font-size: 20px;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
     background-color: rgba(220, 220, 220, 1);
@@ -25,19 +26,20 @@ html, body {
 }
 
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 180px;
+    height: 60px;
 }
 
 .logIn_section {
     font-size: 28px;
 }
 
-.logIn_section > span {
+.logIn_section>span {
     font-size: 28px;
-  }
+}
 
-#signIn, #signUp {
+#signIn,
+#signUp {
     cursor: pointer;
 }
 
@@ -226,7 +228,7 @@ html, body {
     /* overflow: hidden; */
 }
 
-.list > li {
+.list>li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -249,7 +251,7 @@ html, body {
     z-index: 30;
 }
 
-.img_box > img {
+.img_box>img {
     width: 200px;
     height: 200px;
     background-position: center;
@@ -272,13 +274,13 @@ html, body {
     cursor: pointer;
 }
 
-.more:hover{
+.more:hover {
     color: white;
     background-color: rgba(220, 20, 60, 1);
     transition: 0.5s;
 }
 
-#logBox{
+#logBox {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -294,43 +296,43 @@ html, body {
     box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
 }
 
-.idpas{
+.idpas {
     display: flex;
     flex-flow: column;
     width: 300px;
     height: 100px;
 }
 
-.idpas>input:nth-child(1){
+.idpas>input:nth-child(1) {
     height: 50px;
     border: none;
     outline: 2px solid rgba(220, 20, 60, 0.5);
     border-top-left-radius: 7px;
     border-top-right-radius: 7px;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     padding-left: 30px;
     font-size: 16px;
     color: rgba(220, 20, 69, 1);
 }
 
-.idpas>input:nth-child(2){
+.idpas>input:nth-child(2) {
     height: 50px;
     border: none;
     outline: 2px solid rgba(220, 20, 60, 0.5);
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-    background-color: rgba(255,255,255,1);
+    background-color: rgba(255, 255, 255, 1);
     padding-left: 30px;
     font-size: 16px;
     color: rgba(220, 20, 60, 1);
 }
 
-input::placeholder{
+input::placeholder {
     color: rgba(220, 20, 60, 0.3);
     font-size: 16px;
 }
 
-.logBtn{
+.logBtn {
     width: 300px;
     height: 50px;
     border: none;
@@ -341,15 +343,15 @@ input::placeholder{
     cursor: pointer;
 }
 
-.findInfo{
+.findInfo {
     margin: 15px 0px 25px 0px;
 }
 
-.findInfo>a{
+.findInfo>a {
     color: rgba(220, 20, 60, 1);
 }
 
-.findInfo>a + a::before{
+.findInfo>a+a::before {
     content: '';
     display: inline-block;
     width: 2px;
@@ -359,7 +361,7 @@ input::placeholder{
     vertical-align: -2px;
 }
 
-#logBox > i {
+#logBox>i {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -368,7 +370,7 @@ input::placeholder{
     cursor: pointer;
 }
 
-.blur{
+.blur {
     opacity: 0.3;
     transition: 0.5s;
 }
@@ -390,7 +392,7 @@ input::placeholder{
     padding-bottom: 15px;
 }
 
-input[required]+label:after{
+input[required]+label:after {
     content: '*';
     color: red;
     font-size: 30px;
@@ -401,7 +403,7 @@ input[required]+label:after{
     text-align: center;
 }
 
-#signUpBox > i {
+#signUpBox>i {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -410,17 +412,17 @@ input[required]+label:after{
     cursor: pointer;
 }
 
-#signUpBox > section {
+#signUpBox>section {
     width: 100%;
     height: 50px;
     padding-left: 102px;
 }
 
-#signUpBox > section:nth-child(1) {
+#signUpBox>section:nth-child(1) {
     padding-left: 0px;
 }
 
-#signUpBox > section > input {
+#signUpBox>section>input {
     width: 300px;
     height: 50px;
     font-size: 16px;
@@ -430,7 +432,7 @@ input[required]+label:after{
     outline: 2px solid rgba(220, 20, 60, 0.5);
 }
 
-.suBtn{
+.suBtn {
     width: 300px;
     height: 50px;
     border: none;
@@ -439,4 +441,43 @@ input[required]+label:after{
     font-size: 20px;
     border-radius: 7px;
     cursor: pointer;
+}
+.btnBox {
+    width: 100%;
+    border-top: 1px solid rgba(128, 128, 128, 0.3);
+}
+.modal{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.btnBox {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    z-index: 50;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal.show {
+    display: block;
+}
+.modal_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 400px;
+    height: 600px;
+
+    padding: 40px;
+
+    display: flex;
+    text-align: start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    background-color: rgb(255, 255, 255);
 }
