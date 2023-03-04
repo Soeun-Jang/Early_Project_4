@@ -66,32 +66,91 @@
         </div>
       </div>
     </form>
-    <script>
-      const body = document.querySelector('body');
-      const modal = document.querySelector('.modal');
-      const btnOpenPopup = document.querySelector('.btn-open-popup');
-      const xbtn = document.querySelector('.x-btn');
+  </div>
 
-      //body, modal class, btn-open-popup class 요소를 참조하는 변수 선언
-      btnOpenPopup.addEventListener('click', () => {
+  <div class="review-dummy">
+    <div class="dummy-column2">
+      <div>
+        <label>
+          닉네임
+        </label>
+        <input id="nickname" type="text" class="form-control" placeholder="닉네임">
+      </div>
+      <div>
+        <label>
+          리뷰 작성
+        </label>
+        <input id="review" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
+      </div>
+      <div class="star_point">
+        <label class="input-group-text" for="inputGroupSelect01">별점</label>
+        <select class="form-select" id="star">
+          <option selected>-- 선택하기 --</option>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      </div>
+      <button class="btn-open-popup2">평가하기</button>
+    </div>
+  </div>
+
+  <div class="review-dummy">
+    <div class="dummy-column2">
+      <div>
+        <label>
+          닉네임
+        </label>
+        <input id="nickname" type="text" class="form-control" placeholder="닉네임">
+      </div>
+      <div>
+        <label>
+          리뷰 작성
+        </label>
+        <input id="review" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
+      </div>
+      <div class="star_point">
+        <label class="input-group-text" for="inputGroupSelect01">별점</label>
+        <select class="form-select" id="star">
+          <option selected>-- 선택하기 --</option>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      </div>
+      <button class="btn-open-popup2">평가하기</button>
+    </div>
+  </div>
+  <script>
+    const body = document.querySelector('body');
+    const modal = document.querySelector('.modal');
+    const btnOpenPopup = document.querySelector('.btn-open-popup');
+    const xbtn = document.querySelector('.x-btn');
+
+    //body, modal class, btn-open-popup class 요소를 참조하는 변수 선언
+    btnOpenPopup.addEventListener('click', () => {
+      modal.classList.toggle('show');
+
+      if (modal.classList.contains('show')) {
+        body.style.overflow = 'hidden';
+      }
+    });
+
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) {
         modal.classList.toggle('show');
 
-        if (modal.classList.contains('show')) {
-          body.style.overflow = 'hidden';
+        if (!modal.classList.contains('show')) {
+          body.style.overflow = 'auto';
         }
-      });
+      }
+    });
 
-      modal.addEventListener('click', (event) => {
-        if (event.target === modal) {
-          modal.classList.toggle('show');
-
-          if (!modal.classList.contains('show')) {
-            body.style.overflow = 'auto';
-          }
-        }
-      });
-
-    </script>
+  </script>
 
 </body>
 
