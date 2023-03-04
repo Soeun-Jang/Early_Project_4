@@ -2,113 +2,224 @@
 <html lang="ko">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <title>미슐랭4스타</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>미슐랭4스타</title>
 </head>
 
 <body>
-  <section class="banner">
-    <a href=""><img class="logo" src="https://i.ibb.co/0K00GQD/2023-03-02-5-53-43.png" alt="로고"></a>
-    <div class="logIn">
-      <span><a href="">로그인</a></span>
-      <span>|</span>
-      <span><a href="">회원가입</a></span>
+    <div id="sketch">
+        <section class="banner">
+            <a href=""><img class="logo" src="https://i.ibb.co/0K00GQD/2023-03-02-5-53-43.png" alt="로고"></a>
+            <div class="logIn_section">
+                <span id="signIn">로그인</span>
+                <span>|</span>
+                <span id="signUp">회원가입</span>
+            </div>
+        </section>
+        <section class="slide">
+            <ul class="slideul">
+                <li class="slide1"></li>
+                <li class="slide2"></li>
+                <li class="slide3"></li>
+            </ul>
+            <p id="left" class="xi-angle-left"></p>
+            <p id="right" class="xi-angle-right"></p>
+        </section>
+        <section class="middle">
+            <div class="middle2">
+                <div class="sub_title">
+                    <h1>추천 맛집</h1>
+                    <button class="add">추가하기</button>
+                </div>
+                <span class="part"></span>
+                <div class="list_box">
+                    <ul class="list">
+                        <li>
+                            <a href="" class="img_box">
+                                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjlfMjkg%2FMDAxNjcyMjQyNTQxMDYz.cjeYP-X51bbWRo0YwygenDxe1w_MifU1UBWoprtp0jsg.emgS9lyuUGexJkKBilR6Sm2_V9IaOURQvc3wYzJEU2og.JPEG.parksang1213%2FIMG_5251.JPG&type=ofullfill340_600_png"
+                                    class="card-img-top">
+                            </a>
+                            <p class="res_name">restaurant</p>
+                        </li>
+                        <li>
+                            <a href="" class="img_box">
+                                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjZfMjM1%2FMDAxNjY2NzYwMzA2MzIz.uU8VzfuUotaEre_YqkNpFR6zVPRbK4TOxCZFd1HD-uYg.114YckwrVrFMGFFKZA2XabKDmsxe5uZNGZECQCBtX0gg.JPEG.minya0301%2FIMG_2703.jpg&type=a340"
+                                    class="card-img-top">
+                            </a>
+                            <p class="res_name">restaurant</p>
+                        </li>
+                        <li>
+                            <a href="" class="img_box">
+                                <img src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220930_265%2F1664525112441lAp7M_JPEG%2FF8C70622-DDF2-4C35-A67F-7B13C153F037.jpeg&type=a340"
+                                    class="card-img-top">
+                            </a>
+                            <p class="res_name">restaurant</p>
+                        </li>
+                        <li>
+                            <a href="" class="img_box">
+                                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjlfMjkg%2FMDAxNjcyMjQyNTQxMDYz.cjeYP-X51bbWRo0YwygenDxe1w_MifU1UBWoprtp0jsg.emgS9lyuUGexJkKBilR6Sm2_V9IaOURQvc3wYzJEU2og.JPEG.parksang1213%2FIMG_5251.JPG&type=ofullfill340_600_png"
+                                    class="card-img-top">
+                            </a>
+                            <p class="res_name">restaurant</p>
+                        </li>
+                        <!-- <li>
+                            <a href="" class="img_box">
+                                <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjZfMjM1%2FMDAxNjY2NzYwMzA2MzIz.uU8VzfuUotaEre_YqkNpFR6zVPRbK4TOxCZFd1HD-uYg.114YckwrVrFMGFFKZA2XabKDmsxe5uZNGZECQCBtX0gg.JPEG.minya0301%2FIMG_2703.jpg&type=a340"
+                                    class="card-img-top">
+                            </a>
+                            <p class="res_name">restaurant</p>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <p id="left1" class="xi-angle-left"></p>
+            <p id="right1" class="xi-angle-right"></p>
+        </section>
+        <section class="bottom">
+            <button class="more">펼쳐 보기</button>
+        </section>
     </div>
-  </section>
-  <section class="slide">
-    <ul class="slideul">
-      <li class="slide1"></li>
-      <li class="slide2"></li>
-      <li class="slide3"></li>
-    </ul>
-    <p id="left" class="xi-angle-left"></p>
-    <p id="right" class="xi-angle-right"></p>
-  </section>
-  <section class="middle">
-    <div class="middle2">
-      <div class="sub_title">
-        <h1>추천 맛집</h1>
-        <button class="add">추가하기</button>
-      </div>
-      <span class="part"></span>
-      <div class="list_box">
-        <ul class="list">
-          <li>
-            <a href="" class="img_box">
-              <img
-                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjlfMjkg%2FMDAxNjcyMjQyNTQxMDYz.cjeYP-X51bbWRo0YwygenDxe1w_MifU1UBWoprtp0jsg.emgS9lyuUGexJkKBilR6Sm2_V9IaOURQvc3wYzJEU2og.JPEG.parksang1213%2FIMG_5251.JPG&type=ofullfill340_600_png"
-                class="card-img-top">
-            </a>
-            <p class="res_name">restaurant</p>
-          </li>
-          <li>
-            <a href="" class="img_box">
-              <img
-                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjZfMjM1%2FMDAxNjY2NzYwMzA2MzIz.uU8VzfuUotaEre_YqkNpFR6zVPRbK4TOxCZFd1HD-uYg.114YckwrVrFMGFFKZA2XabKDmsxe5uZNGZECQCBtX0gg.JPEG.minya0301%2FIMG_2703.jpg&type=a340"
-                class="card-img-top">
-            </a>
-            <p class="res_name">restaurant</p>
-          </li>
-          <li>
-            <a href="" class="img_box">
-              <img
-                src="https://search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220930_265%2F1664525112441lAp7M_JPEG%2FF8C70622-DDF2-4C35-A67F-7B13C153F037.jpeg&type=a340"
-                class="card-img-top">
-            </a>
-            <p class="res_name">restaurant</p>
-          </li>
-          <li>
-            <a href="" class="img_box">
-              <img
-                src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEyMjlfMjkg%2FMDAxNjcyMjQyNTQxMDYz.cjeYP-X51bbWRo0YwygenDxe1w_MifU1UBWoprtp0jsg.emgS9lyuUGexJkKBilR6Sm2_V9IaOURQvc3wYzJEU2og.JPEG.parksang1213%2FIMG_5251.JPG&type=ofullfill340_600_png"
-                class="card-img-top">
-            </a>
-            <p class="res_name">restaurant</p>
-          </li>
-          <!-- <li>
-                        <a href="" class="img_box">
-                            <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjEwMjZfMjM1%2FMDAxNjY2NzYwMzA2MzIz.uU8VzfuUotaEre_YqkNpFR6zVPRbK4TOxCZFd1HD-uYg.114YckwrVrFMGFFKZA2XabKDmsxe5uZNGZECQCBtX0gg.JPEG.minya0301%2FIMG_2703.jpg&type=a340"
-                                class="card-img-top">
-                        </a>
-                        <p class="res_name">restaurant</p>
-                    </li> -->
-        </ul>
-      </div>
+    <div id="logBox">
+        <section class="top">
+            <p>로그인</p>
+        </section>
+        <section class="idpas">
+            <input type="id" placeholder="id" class="iid">
+            <input type="password" placeholder="password" class="ipw">
+        </section>
+        <section class="btnar">
+            <button class="logBtn">로그인</button>
+        </section>
+        <section class="findInfo">
+            <a href="#">아이디 찾기</a>
+            <a href="#">비밀번호 찾기</a>
+            <a href="#">회원가입</a>
+        </section>
+        <i class="xi-close"></i>
     </div>
-    <p id="left1" class="xi-angle-left"></p>
-    <p id="right1" class="xi-angle-right"></p>
-  </section>
-  <section class="bottom">
-    <button class="more">펼쳐 보기</button>
-  </section>
-  <script>
-    setInterval(function () {
-      $('.slideul').animate({ marginLeft: '-1200px' }, function () {
-        $('.slideul').css('margin-left', '0px');
-        $('.slideul>li').eq(0).appendTo('.slideul');
-      });
-    }, 10000)
+    <div id="signUpBox">
+        <section class="top">
+            <p>회원 가입</p>
+        </section>
+        <section class="ci">
+            <input type="text" name="ci" placeholder="닉네임" class="uci" required>
+            <label for="ci"></label>
+        </section>
+        <section class="id">
+            <input type="text" name="id" placeholder="id 입력" class="uid" required>
+            <label for="id"></label>
+        </section>
+        <section class="pw">
+            <input type="password" name="pw" placeholder="password 입력" class="upw" required>
+            <label for="pw"></label>
+        </section>
+        <section class="ph">
+            <input type="text" name="ph" placeholder="연락처" class="uph">
+            <label for="ph"></label>
+        </section>
+        <section class="su">
+            <button class="suBtn">가입 완료</button>
+        </section>
+        <i class="xi-close"></i>
+    </div>
+    <script>
+        setInterval(function () {
+            $('.slideul').animate({ marginLeft: '-1200px' }, function () {
+                $('.slideul').css('margin-left', '0px');
+                $('.slideul>li').eq(0).appendTo('.slideul');
+            });
+        }, 10000)
 
-    $('#left').click(function () {
-      $('.slideul>li:last-child').prependTo('.slideul');
-      $('.slideul').css('margin-left', '-1200px');
-      $('.slideul').animate({ marginLeft: '0px' }, 500);
-    });
+        $('#left').click(function () {
+            $('.slideul>li:last-child').prependTo('.slideul');
+            $('.slideul').css('margin-left', '-1200px');
+            $('.slideul').animate({ marginLeft: '0px' }, 500);
+        });
 
-    $('#right').click(function () {
-      $('.slideul').animate({ marginLeft: '-1200px' }, 500, function () {
-        $('.slideul').css('margin-left', '0px');
-        $('.slideul>li').eq(0).appendTo('.slideul');
-      });
-    });
-  </script>
+        $('#right').click(function () {
+            $('.slideul').animate({ marginLeft: '-1200px' }, 500, function () {
+                $('.slideul').css('margin-left', '0px');
+                $('.slideul>li').eq(0).appendTo('.slideul');
+            });
+        });
+
+        $('#logBox').hide();
+
+        $('#signIn').click(function () {
+            $('#signUpBox').hide();
+            $('#logBox').fadeIn(500);
+            $('#sketch').addClass('blur');
+            $('#sketch').css("pointer-events", "none");
+        });
+
+        $('#logBox>i').click(function () {
+            $('#signUpBox').hide();
+            $('#logBox').hide();
+            $('#sketch').removeClass('blur');
+            $('#sketch').css("pointer-events", "auto");
+            $('.iid').val('');
+            $('.ipw').val('');
+        });
+
+        $('.logBtn').click(function () {
+            if ($('.iid').val() == 'michelin' && $('.ipw').val() == '4star') {
+                alert('반가워요!');
+                $('#signUpBox').hide();
+                $('#logBox').hide();
+                $('#sketch').removeClass('blur');
+                $('#sketch').css("pointer-events", "auto");
+                $('.iid').val('');
+                $('.ipw').val('');
+                $('.add').css('display', 'block')
+                $('.logIn_section').css('display', 'none')
+            } else {
+                alert('id또는 pw를 다시 입력해 주세요!');
+            }
+        })
+
+        $('#signUpBox').hide();
+
+        $('#signUp').click(function () {
+            $('#logBox').hide();
+            $('#signUpBox').fadeIn(500);
+            $('#sketch').addClass('blur');
+            $('#sketch').css("pointer-events", "none");
+        });
+
+        $('#signUpBox>i').click(function () {
+            $('#logBox').hide();
+            $('#signUpBox').hide();
+            $('#sketch').removeClass('blur');
+            $('#sketch').css("pointer-events", "auto");
+        });
+
+        $('.suBtn').click(function () {
+            if ($('.uci').val() == '') {
+                alert('닉네임은 필수 입력 사항 입니다!')
+            } else if ($('.uid').val() == '') {
+                alert('id는 필수 입력 사항 입니다!');
+            } else if ($('.upw').val() == '') {
+                alert('pw는 필수 입력 사항 입니다!');
+            } else {
+                alert('가입이 완료 되었습니다!');
+                $('#logBox').hide();
+                $('#signUpBox').hide();
+                $('#sketch').removeClass('blur');
+                $('#sketch').css("pointer-events", "auto");
+                $('.uci').val('');
+                $('.uid').val('');
+                $('upw').val('');
+                $('uph').val('');
+            }
+        })
+    </script>
 </body>
 
 </html>
