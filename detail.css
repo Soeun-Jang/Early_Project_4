@@ -9,8 +9,7 @@
   font-size: 20px;
 }
 
-html,
-body {
+html, body {
   width: 100%;
   height: 100%;
   background-color: rgba(220, 220, 220, 1);
@@ -30,7 +29,7 @@ body {
   height: 60px;
 }
 
-.logIn_section > span {
+.logIn_section>span {
   font-size: 28px;
 }
 
@@ -44,30 +43,16 @@ body {
 
 .img-dummy {
   width: 700px;
-  height: 550px;
+  height: 600px;
   background-color: rgba(245, 245, 245, 1);
-
   margin: 0px auto;
-
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
 }
-.review-dummy{
-  width: 700px;
-  height: 400px;
-  background-color: whitesmoke;
 
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  padding-left: 20px;
-  margin-top: 30px;
-  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
-}
 .dummy-food {
   height: 300px;
   width: 670px;
@@ -82,16 +67,49 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding-left: 25px;
-  margin: 15px 0px;
+  margin: 0px 0px 40px;
   height: 200px;
 }
 
-.btnBox {
-  width: 100%;
-  border-top: 1px solid rgba(128, 128, 128, 0.3);
+.review-dummy{
+  width: 700px;
+  height: 500px;
+  margin: 30px auto;
+  padding: 30px 0px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 1);
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
 }
 
+.review-dummy > section {
+  width: 470px;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.review-dummy > section:nth-child(3) > .form-select{
+  margin-right: 205px;
+  padding: 13px 0px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+  font-size: 16px;
+}
+
+.review-dummy > section > input {
+  width: 340px;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+}
 
 .form-control {
   display: flex;
@@ -105,10 +123,197 @@ body {
   margin-top: 10px;
 }
 
-.btn-open-popup2{
-  margin: 10px 0 20px 0;
-  border-radius: 50px;
-  padding: 3px 5px 3px 5px;
-  border-color: whitesmoke;
-  box-shadow: rgba(128, 128, 128, 1) 1px 2px 8px 1px;
+.writeBtn {
+  width: 300px;
+  height: 50px;
+  border: none;
+  background-color:rgba(240, 240, 240, 1);
+  color: rgba(220, 20, 60, 1);
+  font-size: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.writeBtn:hover {
+  color: rgba(240, 240, 240, 1);
+  background-color: rgba(220, 20, 60, 1);
+  transition: 0.5s;
+}
+
+.blur {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+#logBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 350px;
+  border-radius: 7px;
+  background-color: rgba(220, 220, 220, 1);
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
+}
+
+.top > p {
+  font-size: 40px;
+  text-align: center;
+}
+
+.idpas {
+  display: flex;
+  flex-flow: column;
+  width: 300px;
+  height: 100px;
+}
+
+.idpas>input:nth-child(1) {
+  height: 50px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  background-color: rgba(255, 255, 255, 1);
+  padding-left: 30px;
+  font-size: 16px;
+  color: rgba(220, 20, 69, 1);
+}
+
+.idpas>input:nth-child(2) {
+  height: 50px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  background-color: rgba(255, 255, 255, 1);
+  padding-left: 30px;
+  font-size: 16px;
+  color: rgba(220, 20, 60, 1);
+}
+
+input::placeholder {
+  color: rgba(220, 20, 60, 0.3);
+  font-size: 16px;
+}
+
+.logBtn {
+  width: 300px;
+  height: 50px;
+  border: none;
+  background-color:rgba(240, 240, 240, 1);
+  color: rgba(220, 20, 60, 1);
+  font-size: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.logBtn:hover {
+  color: rgba(240, 240, 240, 1);
+  background-color: rgba(220, 20, 60, 1);
+  transition: 0.5s;
+}
+
+.findInfo {
+  margin: 15px 0px 25px 0px;
+}
+
+.findInfo > a {
+  color: rgba(220, 20, 60, 1);
+}
+
+.findInfo>a+a::before {
+  content: '';
+  display: inline-block;
+  width: 2px;
+  height: 15px;
+  margin: 0 8px 0px 8px;
+  background-color: rgba(220, 20, 60, 0.5);
+  vertical-align: -2px;
+}
+
+#logBox > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#signUpBox {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 7px;
+  background-color: rgba(220, 220, 220, 1);
+  box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
+  padding-bottom: 15px;
+}
+
+input[required]+label:after {
+  content: '*';
+  color: red;
+  font-size: 30px;
+}
+
+#signUpBox>section {
+  width: 100%;
+  height: 50px;
+  padding-left: 102px;
+}
+
+#signUpBox>section:nth-child(1) {
+  padding-left: 0px;
+}
+
+#signUpBox > section > input {
+  width: 300px;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.suBtn {
+  width: 300px;
+  height: 50px;
+  border: none;
+  background-color:rgba(240, 240, 240, 1);
+  color: rgba(220, 20, 60, 1);
+  font-size: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.suBtn:hover {
+  color: rgba(240, 240, 240, 1);
+  background-color: rgba(220, 20, 60, 1);
+  transition: 0.5s;
+}
+
+#signUpBox > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }

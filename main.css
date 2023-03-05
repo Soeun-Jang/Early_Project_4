@@ -9,8 +9,7 @@
     font-size: 20px;
 }
 
-html,
-body {
+html, body {
     width: 100%;
     height: 100%;
     background-color: rgba(220, 220, 220, 1);
@@ -30,36 +29,12 @@ body {
     height: 60px;
 }
 
-.logIn_section {
-    font-size: 28px;
-}
-
 .logIn_section>span {
     font-size: 28px;
 }
 
-#signIn,
-#signUp {
+#signIn, #signUp {
     cursor: pointer;
-}
-
-.add {
-    font-size: 20px;
-    width: 100px;
-    height: 40px;
-    display: none;
-    border-radius: 10px;
-    box-shadow: rgba(128, 128, 128, 1) 3px 2px 10px 2px;
-    background-color: rgba(230, 230, 230, 1);
-    color: rgba(220, 20, 60, 1);
-    border: none;
-    cursor: pointer;
-}
-
-.add:hover {
-    color: white;
-    background-color: rgba(220, 20, 60, 1);
-    transition: 0.5s;
 }
 
 .slide {
@@ -79,9 +54,7 @@ body {
     height: 350px;
 }
 
-.slide1,
-.slide2,
-.slide3 {
+.slide1, .slide2, .slide3 {
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -100,7 +73,7 @@ body {
     background-image: url('https://unsplash.com/photos/-YHSwy6uqvk/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8OHx8Zm9vZHxrb3wwfHx8fDE2Nzc4MTQ0MDg&force=true&w=1920');
 }
 
-.slide>p {
+.slide > p {
     font-size: 70px;
     font-weight: bold;
     color: rgba(128, 128, 128, 1);
@@ -155,49 +128,38 @@ body {
     background-color: rgba(240, 240, 240, 1);
 }
 
-#left1 {
-    position: absolute;
-    top: 50%;
-    left: -6%;
-    transform: translateY(-50%);
-    transition: 0.5s;
-    color: rgba(180, 180, 180, 0.5);
-    font-size: 50px;
-    cursor: pointer;
-}
-
-#right1 {
-    position: absolute;
-    top: 50%;
-    right: -6%;
-    transform: translateY(-50%);
-    transition: 0.5s;
-    color: rgba(180, 180, 180, 0.5);
-    font-size: 50px;
-    cursor: pointer;
-}
-
-#left1:hover {
-    color: rgba(220, 20, 60, 1);
-    text-shadow: 3px 2px 5px rgba(128, 128, 128, 1);
-}
-
-#right1:hover {
-    color: rgba(220, 20, 60, 1);
-    text-shadow: 3px 2px 5px rgba(128, 128, 128, 1);
-}
-
 .sub_title {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
     min-height: 65px;
-    padding: 15px 32px 17px;
+    padding: 0px 32px;
     border-radius: 28px 28px 0px 0px;
     background-color: rgba(250, 250, 250, 1);
     text-shadow: 1px 1px 5px rgba(128, 128, 128, 0.7);
+}
+
+.sub_title > p {
+    font-size: 25px;
+}
+
+.add {
     font-size: 20px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 0px 6px 3px;
+    background-color: rgba(230, 230, 230, 1);
+    color: rgba(220, 20, 60, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.add:hover {
+    color: white;
+    background-color: rgba(220, 20, 60, 1);
+    transition: 0.5s;
 }
 
 .part {
@@ -260,6 +222,38 @@ body {
     border-radius: 14px;
 }
 
+#left1 {
+    position: absolute;
+    top: 50%;
+    left: -6%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    color: rgba(180, 180, 180, 0.5);
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#right1 {
+    position: absolute;
+    top: 50%;
+    right: -6%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+    color: rgba(180, 180, 180, 0.5);
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#left1:hover {
+    color: rgba(220, 20, 60, 1);
+    text-shadow: 3px 2px 5px rgba(128, 128, 128, 1);
+}
+
+#right1:hover {
+    color: rgba(220, 20, 60, 1);
+    text-shadow: 3px 2px 5px rgba(128, 128, 128, 1);
+}
+
 .more {
     width: 100px;
     height: 50px;
@@ -267,7 +261,7 @@ body {
     margin: 0px auto;
     font-size: 20px;
     border-radius: 15px;
-    box-shadow: rgba(128, 128, 128, 1) 3px 2px 10px 2px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 3px;
     background-color: rgba(230, 230, 230, 1);
     color: rgba(220, 20, 60, 1);
     border: none;
@@ -277,6 +271,12 @@ body {
 .more:hover {
     color: white;
     background-color: rgba(220, 20, 60, 1);
+    transition: 0.5s;
+}
+
+/* 여기부터 로그인 & 회원가입 & 추가하기 모달 관련 css */
+.blur {
+    opacity: 0.3;
     transition: 0.5s;
 }
 
@@ -294,6 +294,11 @@ body {
     border-radius: 7px;
     background-color: rgba(220, 220, 220, 1);
     box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
+}
+
+.top > p {
+    font-size: 40px;
+    text-align: center;
 }
 
 .idpas {
@@ -336,18 +341,25 @@ input::placeholder {
     width: 300px;
     height: 50px;
     border: none;
-    background-color: rgba(220, 20, 60, 1);
-    color: rgba(220, 220, 220, 1);
+    background-color:rgba(240, 240, 240, 1);
+    color: rgba(220, 20, 60, 1);
     font-size: 20px;
     border-radius: 7px;
     cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.logBtn:hover {
+    color: rgba(240, 240, 240, 1);
+    background-color: rgba(220, 20, 60, 1);
+    transition: 0.5s;
 }
 
 .findInfo {
     margin: 15px 0px 25px 0px;
 }
 
-.findInfo>a {
+.findInfo > a {
     color: rgba(220, 20, 60, 1);
 }
 
@@ -361,18 +373,13 @@ input::placeholder {
     vertical-align: -2px;
 }
 
-#logBox>i {
+#logBox > i {
     position: absolute;
     top: 10px;
     right: 10px;
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
-}
-
-.blur {
-    opacity: 0.3;
-    transition: 0.5s;
 }
 
 #signUpBox {
@@ -398,20 +405,6 @@ input[required]+label:after {
     font-size: 30px;
 }
 
-.top {
-    font-size: 40px;
-    text-align: center;
-}
-
-#signUpBox>i {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
 #signUpBox>section {
     width: 100%;
     height: 50px;
@@ -422,7 +415,7 @@ input[required]+label:after {
     padding-left: 0px;
 }
 
-#signUpBox>section>input {
+#signUpBox > section > input {
     width: 300px;
     height: 50px;
     font-size: 16px;
@@ -436,51 +429,107 @@ input[required]+label:after {
     width: 300px;
     height: 50px;
     border: none;
-    background-color: rgba(220, 20, 60, 1);
-    color: rgba(220, 220, 220, 1);
+    background-color:rgba(240, 240, 240, 1);
+    color: rgba(220, 20, 60, 1);
     font-size: 20px;
     border-radius: 7px;
     cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
 }
-.btnBox {
-    width: 100%;
-    border-top: 1px solid rgba(128, 128, 128, 0.3);
+
+.suBtn:hover {
+    color: rgba(240, 240, 240, 1);
+    background-color: rgba(220, 20, 60, 1);
+    transition: 0.5s;
 }
-.modal{
+
+#signUpBox > i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#addBox{
     position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    z-index: 50;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.btnBox {
-    width: 100%;
-    height: 100%;
-
-    display: none;
-    z-index: 50;
-
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.modal.show {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-
-}
-.modal_body {
-    width: 400px;
-    height: 500px;
-    padding: 40px;
-    text-align: start;
     flex-direction: column;
-    flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(255, 255, 255);
+    align-items: center;
+    width: 500px;
+    height: 570px;
+    border-radius: 7px;
+    background-color: rgba(220, 220, 220, 1);
+    box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
 }
-.modal_body > div {
-    margin-bottom: 20px;
+
+.input_area {
+    height: 350px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_area > section {
+    width: 420px;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input_area > section:nth-child(5) > .form-select{
+    margin-right: 167px;
+    padding: 13px 0px;
+    border-radius: 7px;
+    border: none;
+    outline: 2px solid rgba(220, 20, 60, 0.5);
+    font-size: 16px;
+}
+
+.input_area > section > label {
+    font-size: 25px;
+}
+
+.input_area > section > input {
+    width: 300px;
+    height: 50px;
+    font-size: 16px;
+    padding-left: 30px;
+    border-radius: 7px;
+    border: none;
+    outline: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.addBtn {
+    width: 300px;
+    height: 50px;
+    border: none;
+    background-color:rgba(240, 240, 240, 1);
+    color: rgba(220, 20, 60, 1);
+    font-size: 20px;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.addBtn:hover {
+    color: rgba(240, 240, 240, 1);
+    background-color: rgba(220, 20, 60, 1);
+    transition: 0.5s;
+}
+
+#addBox > i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
 }

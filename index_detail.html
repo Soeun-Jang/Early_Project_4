@@ -5,86 +5,45 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>미슐랭4스타</title>
   <link rel="stylesheet" href="detail.css">
+  <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet">
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <title>미슐랭4스타</title>
 </head>
 
 <body>
-  <section class="banner">
-    <a href="index_main.html"><img class="logo" src="https://i.ibb.co/0V4mdTc/M4S-Logo.png" alt="M4S-Logo" border="0"></a>
-    <div class="logIn_section">
-      <span id="signIn">로그인</span>
-      <span>|</span>
-      <span id="signUp">회원가입</span>
-    </div>
-  </section>
-
-  <section class="mainCont">
-    <div class="img-dummy">
-      <div class="dummy-food">
+  <div id="sketch">
+    <section class="banner">
+      <a href="index_main.html"><img class="logo" src="https://i.ibb.co/0V4mdTc/M4S-Logo.png" alt="M4S-Logo"></a>
+      <div class="logIn_section">
+        <span id="signIn">로그인</span>
+        <span>|</span>
+        <span id="signUp">회원가입</span>
       </div>
-      <div class="dummy-column">
-        <div>가게명</div>
-        <div>위치</div>
-        <div>추천 메뉴</div>
-        <div>별점 ★★★★★</div>
+    </section>
+    <section class="mainCont">
+      <div class="img-dummy">
+        <div class="dummy-food">
+        </div>
+        <div class="dummy-column">
+          <div>가게명</div>
+          <div>위치</div>
+          <div>추천 메뉴</div>
+          <div>별점 ★★★★★</div>
+        </div>
       </div>
-      <div class="btnBox">
-        <button class="btn-open-popup">평가하기1</button>
-      </div>
-      <!-- <form>
-        <div class="modal">
-          <div class="modal_body">맛집 공유
-            <div>
-              <label>이미지</label>
-              <input id="img" type="url" class="form-control" placeholder="이미지URL">
-            </div>
-            <div>
-              <label>가게명 </label>
-              <input id="sikdang" type="text" class="form-control" placeholder="가게명">
-            </div>
-            <div>
-              <label>추천 메뉴</label>
-              <input id="bestmenu" type="text" class="form-control" placeholder="메뉴 이름">
-            </div>
-            <div>
-              <label>위치</label>
-              <input id="place" type="text" class="form-control" placeholder="가게 위치">
-            </div>
-            <div class="star_point">
-              <label class="input-group-text" for="inputGroupSelect01">별점</label>
-              <select class="form-select" id="star">
-                <option selected>-- 선택하기 --</option>
-                <option value="1">⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="5">⭐⭐⭐⭐⭐</option>
-              </select>
-            </div>
-            <button class="x-btn">공유하기</button>
-          </div>
-        </div>
-      </form> -->
-    </div>
-
-    <div class="review-dummy">
-      <div class="dummy-column2">
-        <div>
-          <label>
-            닉네임
-          </label>
-          <input id="nickname" type="text" class="form-control" placeholder="닉네임">
-        </div>
-        <div>
-          <label>
-            리뷰 작성
-          </label>
-          <input id="review" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
-        </div>
-        <div class="star_point">
+      <div class="review-dummy">
+        <section class="un">
+          <label>닉네임</label>
+          <input id="nickname1" type="text" class="form-control" placeholder="닉네임">
+        </section>
+        <section class="rw">
+          <label>리뷰 작성</label>
+          <input id="review1" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
+        </section>
+        <section class="star_point">
           <label class="input-group-text" for="inputGroupSelect01">별점</label>
           <select class="form-select" id="star">
             <option selected>-- 선택하기 --</option>
@@ -94,26 +53,19 @@
             <option value="4">⭐⭐⭐⭐</option>
             <option value="5">⭐⭐⭐⭐⭐</option>
           </select>
-        </div>
-        <button class="btn-open-popup2">작성하기</button>
+        </section>
+        <button class="writeBtn">작성하기</button>
       </div>
-    </div>
-
-    <div class="review-dummy">
-      <div class="dummy-column2">
-        <div>
-          <label>
-            닉네임
-          </label>
-          <input id="nickname" type="text" class="form-control" placeholder="닉네임">
-        </div>
-        <div>
-          <label>
-            리뷰 작성
-          </label>
-          <input id="review" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
-        </div>
-        <div class="star_point">
+      <div class="review-dummy">
+        <section class="un">
+          <label>닉네임</label>
+          <input id="nickname2" type="text" class="form-control" placeholder="닉네임">
+        </section>
+        <section class="rw">
+          <label>리뷰 작성</label>
+          <input id="review2" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
+        </section>
+        <section class="star_point">
           <label class="input-group-text" for="inputGroupSelect01">별점</label>
           <select class="form-select" id="star">
             <option selected>-- 선택하기 --</option>
@@ -123,38 +75,131 @@
             <option value="4">⭐⭐⭐⭐</option>
             <option value="5">⭐⭐⭐⭐⭐</option>
           </select>
-        </div>
-        <button class="btn-open-popup2">작성하기</button>
+        </section>
+        <button class="writeBtn">작성하기</button>
       </div>
-    </div>
-  </section>
-  <script>
-    const body = document.querySelector('body');
-    const modal = document.querySelector('.modal');
-    const btnOpenPopup = document.querySelector('.btn-open-popup');
-    const xbtn = document.querySelector('.x-btn');
+    </section>
+  </div>
 
-    //body, modal class, btn-open-popup class 요소를 참조하는 변수 선언
-    btnOpenPopup.addEventListener('click', () => {
-      modal.classList.toggle('show');
+  <div id="logBox">
+    <section class="top">
+      <p>로그인</p>
+    </section>
+    <section class="idpas">
+      <input type="id" placeholder="id" class="iid">
+      <input type="password" placeholder="password" class="ipw">
+    </section>
+    <section class="btnar">
+      <button class="logBtn">로그인</button>
+    </section>
+    <section class="findInfo">
+      <a href="#">아이디 찾기</a>
+      <a href="#">비밀번호 찾기</a>
+      <a href="#">회원가입</a>
+    </section>
+    <i class="xi-close"></i>
+  </div>
 
-      if (modal.classList.contains('show')) {
-        body.style.overflow = 'hidden';
-      }
-    });
-
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) {
-        modal.classList.toggle('show');
-
-        if (!modal.classList.contains('show')) {
-          body.style.overflow = 'auto';
-        }
-      }
-    });
-
-  </script>
-
+  <div id="signUpBox">
+    <section class="top">
+      <p>회원 가입</p>
+    </section>
+    <section class="ci">
+      <input type="text" name="ci" placeholder="닉네임" class="uci" required="required">
+      <label for="ci"></label>
+    </section>
+    <section class="id">
+      <input type="text" name="id" placeholder="id 입력" class="uid" required="required">
+      <label for="id"></label>
+    </section>
+    <section class="pw">
+      <input type="password" name="pw" placeholder="password 입력" class="upw" required="required">
+      <label for="pw"></label>
+    </section>
+    <section class="ph">
+      <input type="text" name="ph" placeholder="연락처" class="uph">
+      <label for="ph"></label>
+    </section>
+    <section class="su">
+      <button class="suBtn">가입 완료</button>
+    </section>
+    <i class="xi-close"></i>
+  </div>
 </body>
 
 </html>
+
+<script>
+  $('#logBox').hide();
+
+  $('#signIn').click(function () {
+    $('#signUpBox').hide();
+    $('#logBox').fadeIn(500);
+    $('#sketch').addClass('blur');
+    $('#sketch').css("pointer-events", "none");
+  });
+
+  $('#logBox>i').click(function () {
+    $('#signUpBox').hide();
+    $('#logBox').hide();
+    $('#addBox').hide();
+    $('#sketch').removeClass('blur');
+    $('#sketch').css("pointer-events", "auto");
+    $('.iid').val('');
+    $('.ipw').val('');
+  });
+
+  $('.logBtn').click(function () {
+    if ($('.iid').val() == 'michelin' && $('.ipw').val() == '4star') {
+      alert('반가워요!');
+      $('#signUpBox').hide();
+      $('#logBox').hide();
+      $('#addBox').hide();
+      $('#sketch').removeClass('blur');
+      $('#sketch').css("pointer-events", "auto");
+      $('.iid').val('');
+      $('.ipw').val('');
+      $('.logIn_section').css('display', 'none');
+    } else {
+      alert('id또는 pw를 다시 입력해 주세요!');
+    }
+  })
+
+  $('#signUpBox').hide();
+
+  $('#signUp').click(function () {
+    $('#logBox').hide();
+    $('#signUpBox').fadeIn(500);
+    $('#sketch').addClass('blur');
+    $('#sketch').css("pointer-events", "none");
+  });
+
+  $('#signUpBox>i').click(function () {
+    $('#logBox').hide();
+    $('#signUpBox').hide();
+    $('#addBox').hide();
+    $('#sketch').removeClass('blur');
+    $('#sketch').css("pointer-events", "auto");
+  });
+
+  $('.suBtn').click(function () {
+    if ($('.uci').val() == '') {
+      alert('닉네임은 필수 입력 사항 입니다!')
+    } else if ($('.uid').val() == '') {
+      alert('id는 필수 입력 사항 입니다!');
+    } else if ($('.upw').val() == '') {
+      alert('pw는 필수 입력 사항 입니다!');
+    } else {
+      alert('가입이 완료 되었습니다!');
+      $('#logBox').hide();
+      $('#signUpBox').hide();
+      $('#addBox').hide();
+      $('#sketch').removeClass('blur');
+      $('#sketch').css("pointer-events", "auto");
+      $('.uci').val('');
+      $('.uid').val('');
+      $('upw').val('');
+      $('uph').val('');
+    }
+  });
+</script>
