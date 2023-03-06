@@ -199,6 +199,10 @@ html, body {
     height: 250px;
 }
 
+.list > li > a > p {
+    text-align: center;
+}
+
 .img_box {
     position: relative;
     user-select: none;
