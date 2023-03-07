@@ -172,21 +172,23 @@ html, body {
     /* overflow: hidden; */
     display: flex;
     justify-content: center;
-    width: 1186px;
+    width: 1070px;
     height: 100%;
+    overflow: hidden;
 }
 
 .list {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    gap: 18px;
+    justify-content: flex-start;
+    gap: 0px 32px;
     width: 1070px;
     height: 100%;
     padding-left: 32px;
     padding-right: 32px;
-    /* transition-duration: 250ms; */
+    transition-duration: 250ms;
+    transition: 1s;
     /* overflow: hidden; */
 }
 
@@ -194,7 +196,7 @@ html, body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 14px;
+    gap: 10px 0px;
     width: 200px;
     height: 250px;
 }
