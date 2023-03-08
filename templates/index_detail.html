@@ -53,7 +53,7 @@
           </section>
         </div>
       </section>
-      <section class="reviewCont">
+      <section class="reviewCont" id="reviewCont">
         <div class="userReview">
           <div class="urTop">
             <p>아이디</p>
@@ -283,6 +283,39 @@
     $('#reviewi').val('');
     $('#reviewStar').val('-- 선택하기 --');
   });
+
+  $(document).ready(function () {
+    review_listing();
+  });
+
+  function review_listing() {
+    let reviewlist = JSON.parse('{{ data1 | tojson}}');
+    console.log(reviewlist)
+    $('#reviewCont').empty()
+    reviewlist.forEach((a) => {
+      console.log(a)
+      let userid = a['userID']
+      let txt_review = a['Txt_review']
+      let starpoint = a['StarPoint_review']
+
+      let temp_html = `<div class="userReview">
+                        <div class="urTop">
+                          <p>아이디 ${userid}</p>
+                          <p>별점 ${starpoint}</p>
+                        </div>
+                        <div class="urMiddle">
+                          <div>내용 ${txt_review}</div>
+                        </div>
+                        <div class="urBottom">
+                          <button class="symBtn1">
+                            <p>공감</p>
+                            <p class="symCnt1">0</p>
+                          </button>
+                        </div>
+                      </div>`
+      $('#reviewCont').append(temp_html)
+    });
+  }
 
   function saveReview() {
     if ($('#userNamei').val() == 0 || $('#reviewi').val() == 0 || $('#reviewStar').val() == '-- 선택하기 --') {

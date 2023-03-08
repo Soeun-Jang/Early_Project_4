@@ -28,8 +28,9 @@ def mglist_get():
 @app.route("/detail/<id>", methods=["GET"])
 def detail_get(id):
     mglist = db.mglist.find_one({'shop': id}, {'_id': False})
-    print(mglist)
-    return render_template('index_detail.html', data=mglist)
+    reviews = list(db.reviewlist.find({'shop':id},{'_id':False}))
+    print(mglist, reviews)
+    return render_template('index_detail.html', data=mglist, data1=reviews)
     # return jsonify({'result': mglist})
 
 
