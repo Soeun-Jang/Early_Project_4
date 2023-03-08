@@ -20,12 +20,12 @@ def mglist_get():
     sikdangs_list = list(db.mglist.find({},{'_id':False}))
     return jsonify({'mglist':sikdangs_list})
 
-@app.route("/detail/get", methods=["GET"])
-def detail_get():
-    mglist = db.mglist.find_one({'shop':'맛집'},{'_id':False})
+@app.route("/detail/<id>", methods=["GET"])
+def detail_get(id):
+    mglist = db.mglist.find_one({'shop':id},{'_id':False})
     print(mglist)
-    # return render_template('index_detail.html')
-    return jsonify({'result': mglist})
+    return render_template('index_detail.html', data=mglist)
+    # return jsonify({'result': mglist})
 
 @app.route("/save", methods=["POST"])
 def mglist_add():

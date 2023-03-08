@@ -25,13 +25,12 @@
     </section>
     <section class="mainCont">
       <div class="img-dummy">
-        <div class="dummy-food">
-        </div>
+        <img class="dummy-food" src={{data.image}}>
         <div class="dummy-column" id="info">
-          <div>가게명</div>
-          <div>위치</div>
-          <div>추천 메뉴</div>
-          <div>별점 ★★★★★</div>
+          <div>가게명:{{data.shop}}</div>
+          <div>위치:{{data.place}}</div>
+          <div>추천 메뉴{{data.menu}}</div>
+          <div>별점 {{data.star}}</div>
         </div>
       </div>
       <div class="review-dummy">
@@ -130,33 +129,6 @@
 </html>
 
 <script>
-  $(document).ready(function () {
-    listing();
-  });
-
-  function listing() {
-    fetch('/detail/get').then((res) => res.json()).then((data) => {
-      let rows = data['result']
-      console.log(rows)
-      let image = rows['image']
-      let shop = rows['shop']
-      let place = rows['place']
-      let menu = rows['menu']
-      let star = rows['star']
-
-      let star_image = '⭐'.repeat(star)
-
-      $('#info').empty()
-      let temp_html = `<div>가게명:${shop}</div>
-                        <div>위치:${place} </div>
-                        <div>추천 메뉴:${menu}</div>
-                        <div>별점 : ${star_image}</div>
-                      `
-
-      $('#info').append(temp_html)
-    })
-  }
-
   $('#logBox').hide();
 
   $('#signIn').click(function () {
