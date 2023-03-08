@@ -23,60 +23,83 @@
         <span id="signUp">회원가입</span>
       </div>
     </section>
-    <section class="mainCont">
-      <div class="img-dummy">
-        <img class="dummy-food" src={{data.image}}>
-        <div class="dummy-column" id="info">
-          <div>가게명:{{data.shop}}</div>
-          <div>위치:{{data.place}}</div>
-          <div>추천 메뉴{{data.menu}}</div>
-          <div>별점 {{data.star}}</div>
+    <section class="bodyCont">
+      <section class="mainCont">
+        <div class="img-dummy">
+          <section class="imgdTop">
+            <div class="foodBox">
+              <img class="dummy-food" src={{data.image}}>
+            </div>
+          </section>
+          <section class="imgdMiddle">
+            <div class="dummy-column" id="info">
+              <div>{{data.shop}}</div>
+              <div>{{data.place}}</div>
+              <div>{{data.menu}}</div>
+              <div>
+                <span>별점</span>
+                <span>{{data.star}}</span>
+              </div>
+            </div>
+          </section>
+          <section class="imgdBottom">
+            <div class="imgdBtnBox">
+              <button class="likeBtn">
+                <p>좋아요</p>
+                <p class="likeCnt">0</p>
+              </button>
+              <button class="writeReviewBtn">평가하기</button>
+            </div>
+          </section>
         </div>
-      </div>
-      <div class="review-dummy">
-        <section class="un">
-          <label>닉네임</label>
-          <input id="nickname1" type="text" class="form-control" placeholder="닉네임">
-        </section>
-        <section class="rw">
-          <label>리뷰 작성</label>
-          <input id="review1" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
-        </section>
-        <section class="star_point">
-          <label class="input-group-text" for="inputGroupSelect01">별점</label>
-          <select class="form-select" id="star">
-            <option selected>-- 선택하기 --</option>
-            <option value="1">⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-          </select>
-        </section>
-        <button class="writeBtn">작성하기</button>
-      </div>
-      <div class="review-dummy">
-        <section class="un">
-          <label>닉네임</label>
-          <input id="nickname2" type="text" class="form-control" placeholder="닉네임">
-        </section>
-        <section class="rw">
-          <label>리뷰 작성</label>
-          <input id="review2" type="text" class="form-control" placeholder="리뷰를 입력해주세요.">
-        </section>
-        <section class="star_point">
-          <label class="input-group-text" for="inputGroupSelect01">별점</label>
-          <select class="form-select" id="star">
-            <option selected>-- 선택하기 --</option>
-            <option value="1">⭐</option>
-            <option value="2">⭐⭐</option>
-            <option value="3">⭐⭐⭐</option>
-            <option value="4">⭐⭐⭐⭐</option>
-            <option value="5">⭐⭐⭐⭐⭐</option>
-          </select>
-        </section>
-        <button class="writeBtn">작성하기</button>
-      </div>
+      </section>
+      <section class="reviewCont">
+        <div class="userReview">
+          <div class="urTop">
+            <p>아이디</p>
+            <p>별점</p>
+          </div>
+          <div class="urMiddle">
+            <div>내용</div>
+          </div>
+          <div class="urBottom">
+            <button class="symBtn">
+              <p>공감</p>
+              <p class="symCnt">0</p>
+            </button>
+          </div>
+        </div>
+        <div class="userReview">
+          <div class="urTop">
+            <p>아이디</p>
+            <p>별점</p>
+          </div>
+          <div class="urMiddle">
+            <div>내용</div>
+          </div>
+          <div class="urBottom">
+            <button class="symBtn">
+              <p>공감</p>
+              <p class="symCnt">0</p>
+            </button>
+          </div>
+        </div>
+        <div class="userReview">
+          <div class="urTop">
+            <p>아이디</p>
+            <p>별점</p>
+          </div>
+          <div class="urMiddle">
+            <div>내용</div>
+          </div>
+          <div class="urBottom">
+            <button class="symBtn">
+              <p>공감</p>
+              <p class="symCnt">0</p>
+            </button>
+          </div>
+        </div>
+      </section>
     </section>
   </div>
 
@@ -121,6 +144,41 @@
     </section>
     <section class="su">
       <button class="suBtn">가입 완료</button>
+    </section>
+    <i class="xi-close"></i>
+  </div>
+
+  <div class="review-dummy">
+    <section class="rdTop">
+      <div class="reviewTitle">
+        <p>맛집 리뷰</p>
+      </div>
+    </section>
+    <section class="rdMiddle1">
+      <div class="userNamec">
+        <label>아이디</label>
+        <input id="userNamei" type="text" class="form-control" placeholder="아이디" required="required">
+      </div>
+      <div class="starPoint">
+        <label class="input-group-text" for="inputGroupSelect01">별점</label>
+        <select class="form-select" id="reviewStar">
+          <option selected>-- 선택하기 --</option>
+          <option value="1">⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="5">⭐⭐⭐⭐⭐</option>
+        </select>
+      </div>
+    </section>
+    <section class="rdMiddle2">
+      <div class="reviewc">
+        <label>리뷰 작성</label>
+        <input id="reviewi" type="text" class="form-control" placeholder="리뷰를 입력해주세요." required="required">
+      </div>
+    </section>
+    <section class="rdBottom">
+      <button onclick="saveReview()" class="pushBtn">등록 하기</button>
     </section>
     <i class="xi-close"></i>
   </div>
@@ -200,5 +258,88 @@
       $('upw').val('');
       $('uph').val('');
     }
+  });
+
+  $('.review-dummy').hide();
+
+  $('.writeReviewBtn').click(function () {
+    let logInCss = $('.logIn_section').css('display');
+    if (logInCss == 'block') {
+      alert('로그인후 이용해 주세요!');
+    } else {
+      $('.review-dummy').fadeIn(500);
+      $('#sketch').addClass('blur');
+      $('#sketch').css("pointer-events", "none");
+    }
+  });
+
+  $('.review-dummy>i').click(function () {
+    $('#signUpBox').hide();
+    $('#logBox').hide();
+    $('.review-dummy').hide();
+    $('#sketch').removeClass('blur');
+    $('#sketch').css("pointer-events", "auto");
+    $('#userNamei').val('');
+    $('#reviewi').val('');
+    $('#reviewStar').val('-- 선택하기 --');
+  });
+
+  function saveReview() {
+    if ($('#userNamei').val() == 0 || $('#reviewi').val() == 0 || $('#reviewStar').val() == '-- 선택하기 --') {
+      alert('닉네임 & 별점 & 리뷰를 입력해 주세요!');
+    } else {
+      // let userID = $('#userNamei').val()
+      // let Txt_review = $('#reviewi').val()
+      // let StarPoint_review = $('#reviewStar').val()
+
+      // let formData = new FormData();
+      // formData.append("userID_give", userID);
+      // formData.append("Txt_review_give", Txt_review);
+      // formData.append("StarPoint_review_give", StarPoint_review);
+
+      // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+      //   console.log(data);
+      //   alert(data["msg"]);
+      // });
+
+      $('#signUpBox').hide();
+      $('#logBox').hide();
+      $('.review-dummy').hide();
+      $('#sketch').removeClass('blur');
+      $('#sketch').css("pointer-events", "auto");
+      $('#userNamei').val('');
+      $('#reviewi').val('');
+      $('#reviewStar').val('-- 선택하기 --');
+    };
+  };
+
+  let count1 = 0;
+  $('.likeBtn').click(function () {
+    count1++;
+    let test = $('.likeCnt').html(count1);
+    // let likeCount = count
+
+    // let formData = new FormData();
+    // formData.append("likeCount_give", likeCount);
+
+    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+    //   console.log(data);
+    //   alert(data["msg"]);
+    // });
+  });
+
+  let count2 = 0;
+  $('.symBtn').click(function () {
+    count2++;
+    let test = $('.symCnt').html(count2);
+    // let likeCount = count
+
+    // let formData = new FormData();
+    // formData.append("likeCount_give", likeCount);
+
+    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+    //   console.log(data);
+    //   alert(data["msg"]);
+    // });
   });
 </script>

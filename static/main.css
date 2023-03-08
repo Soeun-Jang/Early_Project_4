@@ -16,12 +16,17 @@ html, body {
 }
 
 .banner {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 10px 30px 10px 30px;
     background-color: rgba(245, 245, 245, 1);
     box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 3px;
+    z-index: 50;
 }
 
 .logo {
@@ -35,6 +40,10 @@ html, body {
 
 #signIn, #signUp {
     cursor: pointer;
+}
+
+.mainCont {
+    padding-top: 85px;
 }
 
 .slide {
@@ -105,7 +114,7 @@ html, body {
     color: rgba(220, 20, 60, 1);
 }
 
-.middle {
+.middle, .add_middle {
     position: relative;
     width: 1070px;
     height: 330px;
@@ -116,7 +125,7 @@ html, body {
     justify-content: flex-start;
 }
 
-.middle2 {
+.middle2, .add_middle2 {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -128,7 +137,7 @@ html, body {
     background-color: rgba(240, 240, 240, 1);
 }
 
-.sub_title {
+.sub_title, .add_sub_title {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -140,11 +149,11 @@ html, body {
     text-shadow: 1px 1px 5px rgba(128, 128, 128, 0.7);
 }
 
-.sub_title > p {
+.sub_title > p, .add_sub_title > p {
     font-size: 25px;
 }
 
-.add {
+.add, .add2 {
     font-size: 20px;
     width: 100px;
     height: 40px;
@@ -156,13 +165,13 @@ html, body {
     cursor: pointer;
 }
 
-.add:hover {
+.add:hover ,.add2:hover {
     color: white;
     background-color: rgba(220, 20, 60, 1);
     transition: 0.5s;
 }
 
-.part {
+.part, .add_part {
     border-radius: 5px;
     background-color: rgb(128, 128, 128);
 }
@@ -177,7 +186,10 @@ html, body {
     overflow: hidden;
 }
 
-.list {
+.list1,
+.list2,
+.list3,
+.list4 {
     position: relative;
     display: flex;
     align-items: center;
@@ -192,7 +204,10 @@ html, body {
     /* overflow: hidden; */
 }
 
-.list>li {
+.list1>li,
+.list2>li,
+.list3>li,
+.list4>li {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,7 +216,10 @@ html, body {
     height: 250px;
 }
 
-.list > li > a > p {
+.list1 > li > a > p, 
+.list2 > li > a > p, 
+.list3 > li > a > p, 
+.list4 > li > a > p {
     text-align: center;
 }
 
@@ -228,7 +246,7 @@ html, body {
     border-radius: 14px;
 }
 
-#left1 {
+.left1, .left2, .left3, .left4 {
     position: absolute;
     top: 50%;
     left: -6%;
@@ -239,7 +257,7 @@ html, body {
     cursor: pointer;
 }
 
-#right1 {
+.right1, .right2, .right3, .right4 {
     position: absolute;
     top: 50%;
     right: -6%;
@@ -250,12 +268,12 @@ html, body {
     cursor: pointer;
 }
 
-#left1:hover {
+.left1:hover, .left2:hover, .left3:hover, .left4:hover {
     color: rgba(220, 20, 60, 1);
     text-shadow: 3px 2px 5px rgba(128, 128, 128, 1);
 }
 
-#right1:hover {
+.right1:hover, .right2:hover, .right3:hover,.right4:hover {
     color: rgba(220, 20, 60, 1);
     text-shadow: 3px 2px 5px rgba(128, 128, 128, 1);
 }
@@ -298,7 +316,7 @@ html, body {
     width: 500px;
     height: 350px;
     border-radius: 7px;
-    background-color: rgba(220, 220, 220, 1);
+    background-color: rgba(245, 245, 245, 1);
     box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
 }
 
@@ -400,7 +418,7 @@ input::placeholder {
     width: 500px;
     height: 500px;
     border-radius: 7px;
-    background-color: rgba(220, 220, 220, 1);
+    background-color: rgba(245, 245, 245, 1);
     box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
     padding-bottom: 15px;
 }
@@ -470,7 +488,7 @@ input[required]+label:after {
     width: 500px;
     height: 570px;
     border-radius: 7px;
-    background-color: rgba(220, 220, 220, 1);
+    background-color: rgba(245, 245, 245, 1);
     box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
 }
 

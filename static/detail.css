@@ -4,7 +4,7 @@
   list-style: none;
   box-sizing: border-box;
   font-family: 'Black Han Sans', sans-serif;
-  color: rgba(220, 20, 60, 1);
+  color: rgba(70, 70, 70, 1);
   text-decoration: none;
   font-size: 20px;
 }
@@ -15,13 +15,23 @@ html, body {
   background-color: rgba(220, 220, 220, 1);
 }
 
+.blur {
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
 .banner {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   padding: 10px 30px 10px 30px;
   background-color: rgba(245, 245, 245, 1);
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 3px;
+  z-index: 50;
 }
 
 .logo {
@@ -31,10 +41,16 @@ html, body {
 
 .logIn_section>span {
   font-size: 28px;
+  color: rgba(220, 20, 60, 1);
 }
 
 #signIn, #signUp {
   cursor: pointer;
+}
+
+.bodyCont {
+  padding-top: 85px;
+
 }
 
 .mainCont {
@@ -48,18 +64,28 @@ html, body {
   margin: 0px auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  /* align-items: center; */
   justify-content: space-between;
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
+}
+
+.foodBox {
+  height: 300px;
+  width: 670px;
+  margin: 17px auto;
 }
 
 .dummy-food {
   height: 300px;
   width: 670px;
   margin: 17px auto;
-  background-size: cover;
-  background-position: center;
+  object-fit: cover;
+  object-position: center;
   background-image: url("https://cdn-std-web-216-59.cdn-nhncommerce.com/dothegmal4_godomall_com/data/goods/21/06/22/1000000242/1000000242_detail_071.jpg");
+}
+
+.imgdMiddle {
+  height: 170px;
 }
 
 .dummy-column {
@@ -67,42 +93,102 @@ html, body {
   flex-direction: column;
   justify-content: space-between;
   padding-left: 25px;
-  margin: 0px 0px 40px;
-  height: 200px;
+  height: 130px;
 }
 
-.review-dummy{
+.dummy-column > div {
+  color: rgba(130, 130, 130, 1);
+}
+
+.dummy-column > div:nth-child(1) {
+  font-size: 50px;
+  color: rgba(70, 70, 70, 1);
+}
+
+.dummy-column > div:nth-child(4) > span:nth-child(1) {
+  color: rgba(130, 130, 130, 1);
+}
+
+.dummy-column > div:nth-child(4) > span:nth-child(2) {
+  color: rgba(220, 20, 60, 1);
+  font-size: 30px;
+}
+
+.imgdBottom {
+  height: 100px;
+}
+
+.imgdBtnBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0px 25px;
+  border-top: 1px solid rgba(220, 220, 220, 1);
+}
+
+.imgdBtnBox > button {
+  width: 150px;
+  height: 70px;
+  border: none;
+  background-color:rgba(240, 240, 240, 1);
+  color: rgba(220, 20, 60, 1);
+  font-size: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.imgdBtnBox > button > p {
+  color: rgba(220, 20, 60, 1);
+}
+
+.imgdBtnBox > button:nth-child(2):hover {
+  color: rgba(240, 240, 240, 1);
+  background-color: rgba(220, 20, 60, 1);
+  transition: 0.5s;
+}
+
+/* .review-dummy{
+  position: relative;
   width: 700px;
-  height: 500px;
+  height: 600px;
   margin: 30px auto;
-  padding: 30px 0px;
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
   align-items: center;
   background-color: rgba(245, 245, 245, 1);
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
 }
 
-.review-dummy > section {
-  width: 470px;
-  height: 50px;
+.reviewTitle > p {
+  font-size: 50px;
+}
+
+.rdMiddle1 {
+  width: 70%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.review-dummy > section:nth-child(3) > .form-select{
-  margin-right: 205px;
-  padding: 13px 0px;
-  border-radius: 7px;
-  border: none;
-  outline: 2px solid rgba(220, 20, 60, 0.5);
-  font-size: 16px;
+.rdMiddle1 > div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
 }
 
-.review-dummy > section > input {
-  width: 340px;
+.rdMiddle1 > div > label {
+  font-size: 30px;
+}
+
+.rdMiddle1 > div > input {
+  width: 250px;
   height: 50px;
   font-size: 16px;
   padding-left: 30px;
@@ -111,19 +197,47 @@ html, body {
   outline: 2px solid rgba(220, 20, 60, 0.5);
 }
 
-.form-control {
+.form-select {
+  height: 52px;
+  padding: 13px 0px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+  font-size: 16px;
+}
+
+.rdMiddle2 {
   display: flex;
-  text-align: start;
-  flex-direction: column;
-  color: darkslategray;
-
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 70%;
+  height: 300px;
 }
 
-.star_point{
-  margin-top: 10px;
+.rdMiddle2 > div {
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
-.writeBtn {
+.rdMiddle2 > div > label {
+  font-size: 30px;
+}
+
+.rdMiddle2 > div > input {
+  width: 490px;
+  height: 200px;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.pushBtn {
   width: 300px;
   height: 50px;
   border: none;
@@ -135,15 +249,193 @@ html, body {
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
 }
 
-.writeBtn:hover {
+.pushBtn:hover {
   color: rgba(240, 240, 240, 1);
   background-color: rgba(220, 20, 60, 1);
   transition: 0.5s;
 }
 
-.blur {
-  opacity: 0.3;
+.review-dummy > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+} */
+
+.reviewCont {
+  margin-top: 30px;
+}
+
+.userReview {
+  width: 700px;
+  height: 500px;
+  background-color: rgba(245, 245, 245, 1);
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
+}
+
+.urTop {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-flow: column;
+  padding: 25px 25px;
+}
+
+.urMiddle {
+  width: 100%;
+  height: 55%;
+  padding: 0px 25px;
+}
+
+.urBottom {
+  width: 100%;
+  height: 100px;
+  padding: 0px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(220, 220, 220, 1);
+}
+
+.symBtn {
+  width: 150px;
+  height: 70px;
+  border: none;
+  background-color:rgba(240, 240, 240, 1);
+  color: rgba(220, 20, 60, 1);
+  font-size: 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.symBtn > p {
+  color: rgba(220, 20, 60, 1);
+}
+
+.review-dummy{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 600px;
+  height: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(245, 245, 245, 1);
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 5px;
+}
+
+.reviewTitle > p {
+  font-size: 50px;
+}
+
+.rdMiddle1 {
+  width: 70%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rdMiddle1 > div {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 100px;
+}
+
+.rdMiddle1 > div > label {
+  font-size: 30px;
+}
+
+.rdMiddle1 > div > input {
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.form-select {
+  height: 52px;
+  padding: 13px 0px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+  font-size: 16px;
+}
+
+.rdMiddle2 {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 70%;
+  height: 300px;
+}
+
+.rdMiddle2 > div {
+  height: 250px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rdMiddle2 > div > label {
+  font-size: 30px;
+}
+
+.rdMiddle2 > div > input {
+  width: 420px;
+  height: 200px;
+  font-size: 16px;
+  padding-left: 30px;
+  border-radius: 7px;
+  border: none;
+  outline: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.pushBtn {
+  width: 300px;
+  height: 50px;
+  border: none;
+  background-color:rgba(240, 240, 240, 1);
+  color: rgba(220, 20, 60, 1);
+  font-size: 25px;
+  border-radius: 7px;
+  cursor: pointer;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
+}
+
+.pushBtn:hover {
+  color: rgba(240, 240, 240, 1);
+  background-color: rgba(220, 20, 60, 1);
   transition: 0.5s;
+}
+
+.review-dummy > i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 #logBox {
@@ -158,7 +450,7 @@ html, body {
   width: 500px;
   height: 350px;
   border-radius: 7px;
-  background-color: rgba(220, 220, 220, 1);
+  background-color: rgba(245, 245, 245, 1);
   box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
 }
 
@@ -260,7 +552,7 @@ input::placeholder {
   width: 500px;
   height: 500px;
   border-radius: 7px;
-  background-color: rgba(220, 220, 220, 1);
+  background-color: rgba(245, 245, 245, 1);
   box-shadow: rgb(0 0 0 / 30%) 0px 0px 6px 7px;
   padding-bottom: 15px;
 }
