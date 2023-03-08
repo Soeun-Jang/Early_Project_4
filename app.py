@@ -53,5 +53,23 @@ def mglist_add():
     return jsonify({'msg': '저장완료!'})
 
 
+@app.route("/saveReview", methods=["POST"])
+def reviewlist_add():
+    userID_receive = request.form['userID_give']
+    Txt_review_receive = request.form['Txt_review_give']
+    StarPoint_review_receive = request.form['StarPoint_review_give']
+    shop_receive = request.form['shop_give']
+
+    doc = {
+        'userID': userID_receive,
+        'Txt_review': Txt_review_receive,
+        'StarPoint_review': StarPoint_review_receive,
+        'shop': shop_receive
+    }
+    db.reviewlist.insert_one(doc)
+
+    return jsonify({'msg': '저장완료!'})
+
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

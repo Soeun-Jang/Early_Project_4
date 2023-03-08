@@ -70,15 +70,14 @@ html, body {
 }
 
 .foodBox {
-  height: 300px;
-  width: 670px;
-  margin: 17px auto;
+  height: 280px;
+  width: 650px;
+  margin: 25px auto 5px;
 }
 
 .dummy-food {
-  height: 300px;
-  width: 670px;
-  margin: 17px auto;
+  height: 280px;
+  width: 650px;
   object-fit: cover;
   object-position: center;
   background-image: url("https://cdn-std-web-216-59.cdn-nhncommerce.com/dothegmal4_godomall_com/data/goods/21/06/22/1000000242/1000000242_detail_071.jpg");
@@ -101,7 +100,7 @@ html, body {
 }
 
 .dummy-column > div:nth-child(1) {
-  font-size: 50px;
+  font-size: 60px;
   color: rgba(70, 70, 70, 1);
 }
 
@@ -304,7 +303,7 @@ html, body {
   border-top: 1px solid rgba(220, 220, 220, 1);
 }
 
-.symBtn {
+.symBtn1, .symBtn2, .symBtn3 {
   width: 150px;
   height: 70px;
   border: none;
@@ -316,7 +315,7 @@ html, body {
   box-shadow: rgb(0 0 0 / 10%) 0px 0px 6px 7px;
 }
 
-.symBtn > p {
+.symBtn1 > p, .symBtn2 > p, .symBtn3 > p {
   color: rgba(220, 20, 60, 1);
 }
 

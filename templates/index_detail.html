@@ -33,7 +33,7 @@
           </section>
           <section class="imgdMiddle">
             <div class="dummy-column" id="info">
-              <div>{{data.shop}}</div>
+              <div id="shopname">{{data.shop}}</div>
               <div>{{data.place}}</div>
               <div>{{data.menu}}</div>
               <div>
@@ -63,9 +63,9 @@
             <div>내용</div>
           </div>
           <div class="urBottom">
-            <button class="symBtn">
+            <button class="symBtn1">
               <p>공감</p>
-              <p class="symCnt">0</p>
+              <p class="symCnt1">0</p>
             </button>
           </div>
         </div>
@@ -78,9 +78,9 @@
             <div>내용</div>
           </div>
           <div class="urBottom">
-            <button class="symBtn">
+            <button class="symBtn2">
               <p>공감</p>
-              <p class="symCnt">0</p>
+              <p class="symCnt2">0</p>
             </button>
           </div>
         </div>
@@ -93,9 +93,9 @@
             <div>내용</div>
           </div>
           <div class="urBottom">
-            <button class="symBtn">
+            <button class="symBtn3">
               <p>공감</p>
-              <p class="symCnt">0</p>
+              <p class="symCnt3">0</p>
             </button>
           </div>
         </div>
@@ -263,14 +263,14 @@
   $('.review-dummy').hide();
 
   $('.writeReviewBtn').click(function () {
-    let logInCss = $('.logIn_section').css('display');
-    if (logInCss == 'block') {
-      alert('로그인후 이용해 주세요!');
-    } else {
-      $('.review-dummy').fadeIn(500);
-      $('#sketch').addClass('blur');
-      $('#sketch').css("pointer-events", "none");
-    }
+    // let logInCss = $('.logIn_section').css('display');
+    // if (logInCss == 'block') {
+    //   alert('로그인후 이용해 주세요!');
+    // } else {
+    $('.review-dummy').fadeIn(500);
+    $('#sketch').addClass('blur');
+    $('#sketch').css("pointer-events", "none");
+    // }
   });
 
   $('.review-dummy>i').click(function () {
@@ -288,19 +288,21 @@
     if ($('#userNamei').val() == 0 || $('#reviewi').val() == 0 || $('#reviewStar').val() == '-- 선택하기 --') {
       alert('닉네임 & 별점 & 리뷰를 입력해 주세요!');
     } else {
-      // let userID = $('#userNamei').val()
-      // let Txt_review = $('#reviewi').val()
-      // let StarPoint_review = $('#reviewStar').val()
+      let userID = $('#userNamei').val()
+      let Txt_review = $('#reviewi').val()
+      let StarPoint_review = $('#reviewStar').val()
+      let shop = document.querySelector("#shopname").textContent
 
-      // let formData = new FormData();
-      // formData.append("userID_give", userID);
-      // formData.append("Txt_review_give", Txt_review);
-      // formData.append("StarPoint_review_give", StarPoint_review);
+      let formData = new FormData();
+      formData.append("userID_give", userID);
+      formData.append("Txt_review_give", Txt_review);
+      formData.append("StarPoint_review_give", StarPoint_review);
+      formData.append("shop_give", shop);
 
-      // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-      //   console.log(data);
-      //   alert(data["msg"]);
-      // });
+      fetch('/saveReview', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+        console.log(data);
+        alert(data["msg"]);
+      });
 
       $('#signUpBox').hide();
       $('#logBox').hide();
@@ -329,9 +331,39 @@
   });
 
   let count2 = 0;
-  $('.symBtn').click(function () {
+  $('.symBtn1').click(function () {
     count2++;
-    let test = $('.symCnt').html(count2);
+    let test = $('.symCnt1').html(count2);
+    // let likeCount = count
+
+    // let formData = new FormData();
+    // formData.append("likeCount_give", likeCount);
+
+    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+    //   console.log(data);
+    //   alert(data["msg"]);
+    // });
+  });
+
+  let count3 = 0;
+  $('.symBtn2').click(function () {
+    count3++;
+    let test = $('.symCnt2').html(count3);
+    // let likeCount = count
+
+    // let formData = new FormData();
+    // formData.append("likeCount_give", likeCount);
+
+    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+    //   console.log(data);
+    //   alert(data["msg"]);
+    // });
+  });
+
+  let count4 = 0;
+  $('.symBtn3').click(function () {
+    count4++;
+    let test = $('.symCnt3').html(count4);
     // let likeCount = count
 
     // let formData = new FormData();
