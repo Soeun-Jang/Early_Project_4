@@ -277,7 +277,7 @@ html, body {
 
 .userReview {
   width: 700px;
-  height: 500px;
+  height: 350px;
   background-color: rgba(245, 245, 245, 1);
   margin: 30px auto;
   display: flex;
@@ -295,10 +295,37 @@ html, body {
   padding: 25px 25px;
 }
 
+.urTop>p{
+  font-size: 25px;
+}
+
+.urTop2{
+  width: 100%;
+  height: 30px;
+  display: flex;
+  flex-flow: column;
+  padding: 0 0 0 25px;
+}
+
 .urMiddle {
   width: 100%;
-  height: 55%;
+  height: 45%;
   padding: 0px 25px;
+  display: flex;
+  text-align: auto;
+
+}
+.textcss{
+  width: 90%;
+  height: 90%;
+  background-color: rgba(247, 246, 245, 0.987);
+  padding: 10px;
+  border: 2px solid rgba(220, 20, 60, 0.5);
+  margin-left: 10px;
+  border-radius: 7px;
+  color: rgb(51, 51, 51);
+  font-family: cursive;
+  font-size: 17px;
 }
 
 .urBottom {
@@ -423,7 +450,7 @@ html, body {
   width: 420px;
   height: 200px;
   font-size: 16px;
-  padding-left: 30px;
+  padding-left: 10px;
   border-radius: 7px;
   border: none;
   outline: 2px solid rgba(220, 20, 60, 0.5);
