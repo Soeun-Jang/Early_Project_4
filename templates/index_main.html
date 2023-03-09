@@ -437,11 +437,15 @@
     $('.add_middle').hide();
 
     $('.more').click(function () {
-        $('html').css('height', '150%');
-        $('body').css('height', '150%');
-        $('.add_middle').show();
+        // $('html').css('height', '150%');
+        // $('body').css('height', '150%');
+        // $('.add_middle').show();
         $('.more').hide();
-        $('.add_middle').css('margin', '60px auto');
+        $('.left1').hide();
+        $('.right1').hide();
+        // $('.add_middle').css('margin', '60px auto');
+        $('.middle').css('height', '1000px');
+        $('.list1').css('flex-wrap', 'wrap');
     });
 
     $(document).ready(function () {
