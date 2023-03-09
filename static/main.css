@@ -1,9 +1,9 @@
 @font-face {
-    font-family: 'SBAggroB';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
-    font-weight: normal;
+    font-family: 'TheJamsil5Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
-}
+  }
 
 * {
     margin: 0px;
@@ -11,7 +11,7 @@
     list-style: none;
     box-sizing: border-box;
     /* font-family: 'Black Han Sans', sans-serif; */
-    font-family: 'SBAggroB';
+    font-family: 'TheJamsil5Bold';
     color: rgba(220, 20, 60, 1);
     text-decoration: none;
     font-size: 20px;
@@ -529,7 +529,7 @@ input[required]+label:after {
 }
 
 .input_area > section:nth-child(5) > .form-select{
-    margin-right: 160px;
+    margin-right: 167px;
     padding: 13px 0px;
     border-radius: 7px;
     border: none;
