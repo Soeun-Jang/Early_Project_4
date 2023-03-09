@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/main.css">
     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
-    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>미슐랭4스타</title>
 </head>
@@ -250,14 +248,9 @@
     $('#addBox').hide();
 
     $('.add').click(function () {
-        // let logInCss = $('.logIn_section').css('display');
-        // if (logInCss == 'block') {
-        //     alert('로그인후 이용해 주세요!');
-        // } else {
         $('#addBox').fadeIn(500);
         $('#sketch').addClass('blur');
         $('#sketch').css("pointer-events", "none");
-        // }
     });
 
     $('#addBox>i').click(function () {
@@ -309,9 +302,6 @@
     };
 
     $('.left1').css('display', 'none');
-    $('.left2').css('display', 'none');
-    $('.left3').css('display', 'none');
-    $('.left4').css('display', 'none');
 
     let count = 0;
     $('.left1').click(function () {
@@ -344,112 +334,17 @@
         };
     });
 
-    $('.left2').click(function () {
-        count--;
-        if (count <= 0) {
-            $('.left2').css('display', 'none');
-            $('.list2').css('margin-left', '0px');
-        } else if (count > 0) {
-            $('.left2').css('display', 'block');
-            let left = count * -1856;
-            $('.list2').css('margin-left', left + 110 + 'px');
-            if (count < 7) {
-                $('.right2').css('display', 'block');
-            };
-        };
-    });
-
-    $('.right2').click(function () {
-        let riMar = $('.list2').css('margin-left');
-        count++;
-        console.log(count);
-        if (count > 0) {
-            $('.left2').css('display', 'block');
-            let right = count * -1856;
-            $('.list2').css('margin-left', right + 110 + 'px');
-            if (count == 7) {
-                $('.list2').css('margin-left', '-12310px');
-                $('.right2').css('display', 'none');
-            };
-        };
-    });
-
-    $('.left3').click(function () {
-        count--;
-        if (count <= 0) {
-            $('.left3').css('display', 'none');
-            $('.list3').css('margin-left', '0px');
-        } else if (count > 0) {
-            $('.left3').css('display', 'block');
-            let left = count * -1856;
-            $('.list3').css('margin-left', left + 110 + 'px');
-            if (count < 7) {
-                $('.right3').css('display', 'block');
-            };
-        };
-    });
-
-    $('.right3').click(function () {
-        let riMar = $('.list3').css('margin-left');
-        count++;
-        console.log(count);
-        if (count > 0) {
-            $('.left3').css('display', 'block');
-            let right = count * -1856;
-            $('.list3').css('margin-left', right + 110 + 'px');
-            if (count == 7) {
-                $('.list3').css('margin-left', '-12310px');
-                $('.right3').css('display', 'none');
-            };
-        };
-    });
-
-    $('.left4').click(function () {
-        count--;
-        if (count <= 0) {
-            $('.left4').css('display', 'none');
-            $('.list4').css('margin-left', '0px');
-        } else if (count > 0) {
-            $('.left4').css('display', 'block');
-            let left = count * -1856;
-            $('.list4').css('margin-left', left + 110 + 'px');
-            if (count < 7) {
-                $('.right4').css('display', 'block');
-            };
-        };
-    });
-
-    $('.right4').click(function () {
-        let riMar = $('.list4').css('margin-left');
-        count++;
-        console.log(count);
-        if (count > 0) {
-            $('.left4').css('display', 'block');
-            let right = count * -1856;
-            $('.list4').css('margin-left', right + 110 + 'px');
-            if (count == 7) {
-                $('.list4').css('margin-left', '-12310px');
-                $('.right4').css('display', 'none');
-            };
-        };
-    });
-
     $('.add_middle').hide();
 
     $('.more').click(function () {
-        // $('html').css('height', '150%');
-        // $('body').css('height', '150%');
-        // $('.add_middle').show();
         $('.more').hide();
         $('.left1').hide();
         $('.right1').hide();
-        // $('.add_middle').css('margin', '60px auto');
         $('.middle').css('height', '100%');
         $('.list1').css('flex-wrap', 'wrap');
         $('.list1').css('justify-content', 'center');
-        $('.list1').css('margin-left', '0px')
-        $('.list1').css('transition', '0s')
-        // $('.list1').css('align-items', '')
+        $('.list1').css('margin-left', '0px');
+        $('.list1').css('transition', '0s');
     });
 
     $(document).ready(function () {
@@ -465,14 +360,14 @@
                 let image = a['image']
                 let shop = a['shop']
                 let temp_html = `<li>
-                                        <a href='/detail/${shop}' class="img_box">
-                                            <img src="${image}"
-                                                class="card-img-top" alt="">
-                                        </a>
-                                        <a href="/detail/${shop}" class="text_box">
-                                            <p class="res_name">${shop}</p>
-                                        </a>
-                                    </li>`
+                                    <a href='/detail/${shop}' class="img_box">
+                                        <img src="${image}"
+                                            class="card-img-top" alt="">
+                                    </a>
+                                    <a href="/detail/${shop}" class="text_box">
+                                        <p class="res_name">${shop}</p>
+                                    </a>
+                                </li>`
                 $('#list_box1, #list_box2, #list_box3, #list_box4').append(temp_html)
             });
         });

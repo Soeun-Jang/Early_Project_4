@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../static/detail.css">
   <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
-  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <title>미슐랭4스타</title>
 </head>
@@ -54,51 +52,6 @@
         </div>
       </section>
       <section class="reviewCont" id="reviewCont">
-        <div class="userReview">
-          <div class="urTop">
-            <p>아이디</p>
-            <p>별점</p>
-          </div>
-          <div class="urMiddle">
-            <div>내용</div>
-          </div>
-          <div class="urBottom">
-            <button class="symBtn1">
-              <p>공감</p>
-              <p class="symCnt1">0</p>
-            </button>
-          </div>
-        </div>
-        <div class="userReview">
-          <div class="urTop">
-            <p>아이디</p>
-            <p>별점</p>
-          </div>
-          <div class="urMiddle">
-            <div>내용</div>
-          </div>
-          <div class="urBottom">
-            <button class="symBtn2">
-              <p>공감</p>
-              <p class="symCnt2">0</p>
-            </button>
-          </div>
-        </div>
-        <div class="userReview">
-          <div class="urTop">
-            <p>아이디</p>
-            <p>별점</p>
-          </div>
-          <div class="urMiddle">
-            <div>내용</div>
-          </div>
-          <div class="urBottom">
-            <button class="symBtn3">
-              <p>공감</p>
-              <p class="symCnt3">0</p>
-            </button>
-          </div>
-        </div>
       </section>
     </section>
   </div>
@@ -262,14 +215,9 @@
   $('.review-dummy').hide();
 
   $('.writeReviewBtn').click(function () {
-    // let logInCss = $('.logIn_section').css('display');
-    // if (logInCss == 'block') {
-    //   alert('로그인후 이용해 주세요!');
-    // } else {
     $('.review-dummy').fadeIn(500);
     $('#sketch').addClass('blur');
     $('#sketch').css("pointer-events", "none");
-    // }
   });
 
   $('.review-dummy>i').click(function () {
@@ -358,60 +306,5 @@
   $('.likeBtn').click(function () {
     count1++;
     let test = $('.likeCnt').html(count1);
-    // let likeCount = count
-
-    // let formData = new FormData();
-    // formData.append("likeCount_give", likeCount);
-
-    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-    //   console.log(data);
-    //   alert(data["msg"]);
-    // });
   });
-
-  // let count2 = 0;
-  // $('.symBtn1').click(function () {
-  //   count2++;
-  //   $('.symCnt1').html(count2);
-  //   console.log(count2);
-  //   // let likeCount = count
-
-  //   // let formData = new FormData();
-  //   // formData.append("likeCount_give", likeCount);
-
-  //   // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-  //   //   console.log(data);
-  //   //   alert(data["msg"]);
-  //   // });
-  // });
-
-  // let count3 = 0;
-  // $('.symBtn2').click(function () {
-  //   count3++;
-  //   let test = $('.symCnt2').html(count3);
-  //   // let likeCount = count
-
-  //   // let formData = new FormData();
-  //   // formData.append("likeCount_give", likeCount);
-
-  //   // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-  //   //   console.log(data);
-  //   //   alert(data["msg"]);
-  //   // });
-  // });
-
-  // let count4 = 0;
-  // $('.symBtn3').click(function () {
-  //   count4++;
-  //   let test = $('.symCnt3').html(count4);
-  //   // let likeCount = count
-
-  //   // let formData = new FormData();
-  //   // formData.append("likeCount_give", likeCount);
-
-  //   // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-  //   //   console.log(data);
-  //   //   alert(data["msg"]);
-  //   // });
-  // });
 </script>

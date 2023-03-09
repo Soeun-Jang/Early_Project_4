@@ -10,7 +10,6 @@
     padding: 0px;
     list-style: none;
     box-sizing: border-box;
-    /* font-family: 'Black Han Sans', sans-serif; */
     font-family: 'TheJamsil5Bold';
     color: rgba(220, 20, 60, 1);
     text-decoration: none;
@@ -140,7 +139,6 @@ html, body {
     height: 330px;
     margin: 30px auto 20px;
     display: flex;
-    /* flex-direction: column; */
     align-items: center;
     justify-content: center;
 }
@@ -198,7 +196,6 @@ html, body {
 
 .list_box {
     position: relative;
-    /* overflow: hidden; */
     display: flex;
     justify-content: center;
     width: 1070px;
@@ -221,7 +218,6 @@ html, body {
     padding-right: 32px;
     transition-duration: 250ms;
     transition: 1s;
-    /* overflow: hidden; */
 }
 
 .list1>li,
@@ -319,7 +315,6 @@ html, body {
     transition: 0.5s;
 }
 
-/* 여기부터 로그인 & 회원가입 & 추가하기 모달 관련 css */
 .blur {
     opacity: 0.3;
     transition: 0.5s;
