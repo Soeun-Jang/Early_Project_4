@@ -291,11 +291,11 @@
     let reviewlist = JSON.parse('{{ data1 | tojson}}');
     console.log(reviewlist)
     $('#reviewCont').empty()
-    reviewlist.forEach((a) => {
-      console.log(a)
-      let userid = a['userID']
-      let txt_review = a['Txt_review']
-      let starpoint = a['StarPoint_review']
+    for (let i = 0; i < reviewlist.length; i++) {
+      console.log(i)
+      let userid = reviewlist[i]['userID']
+      let txt_review = reviewlist[i]['Txt_review']
+      let starpoint = reviewlist[i]['StarPoint_review']
 
       let temp_html = `<div class="userReview">
                         <div class="urTop">
@@ -305,14 +305,22 @@
                           <div class="textcss">${txt_review}</div>
                         </div>
                         <div class="urBottom">
-                          <button class="symBtn1">
+                          <button class="symBtn1" onclick="symBtn(${i})">
                             <p>공감</p>
-                            <p class="symCnt1">0</p>
+                            <p id="symCnt${i}">0</p>
                           </button>
                         </div>
                       </div>`
       $('#reviewCont').append(temp_html)
-    });
+    }
+  }
+
+  let counttest = [];
+  function symBtn(a) {
+    if(!counttest[a]) counttest[a] = 0;
+    counttest[a]++;
+    console.log(counttest[a]);
+    $('#symCnt'+a).text(counttest[a]);
   }
 
   function saveReview() {
@@ -361,49 +369,49 @@
     // });
   });
 
-  let count2 = 0;
-  $('.symBtn1').click(function () {
-    count2++;
-    $('.symCnt1').html(count2);
-    console.log(count2);
-    // let likeCount = count
+  // let count2 = 0;
+  // $('.symBtn1').click(function () {
+  //   count2++;
+  //   $('.symCnt1').html(count2);
+  //   console.log(count2);
+  //   // let likeCount = count
 
-    // let formData = new FormData();
-    // formData.append("likeCount_give", likeCount);
+  //   // let formData = new FormData();
+  //   // formData.append("likeCount_give", likeCount);
 
-    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-    //   console.log(data);
-    //   alert(data["msg"]);
-    // });
-  });
+  //   // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+  //   //   console.log(data);
+  //   //   alert(data["msg"]);
+  //   // });
+  // });
 
-  let count3 = 0;
-  $('.symBtn2').click(function () {
-    count3++;
-    let test = $('.symCnt2').html(count3);
-    // let likeCount = count
+  // let count3 = 0;
+  // $('.symBtn2').click(function () {
+  //   count3++;
+  //   let test = $('.symCnt2').html(count3);
+  //   // let likeCount = count
 
-    // let formData = new FormData();
-    // formData.append("likeCount_give", likeCount);
+  //   // let formData = new FormData();
+  //   // formData.append("likeCount_give", likeCount);
 
-    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-    //   console.log(data);
-    //   alert(data["msg"]);
-    // });
-  });
+  //   // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+  //   //   console.log(data);
+  //   //   alert(data["msg"]);
+  //   // });
+  // });
 
-  let count4 = 0;
-  $('.symBtn3').click(function () {
-    count4++;
-    let test = $('.symCnt3').html(count4);
-    // let likeCount = count
+  // let count4 = 0;
+  // $('.symBtn3').click(function () {
+  //   count4++;
+  //   let test = $('.symCnt3').html(count4);
+  //   // let likeCount = count
 
-    // let formData = new FormData();
-    // formData.append("likeCount_give", likeCount);
+  //   // let formData = new FormData();
+  //   // formData.append("likeCount_give", likeCount);
 
-    // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
-    //   console.log(data);
-    //   alert(data["msg"]);
-    // });
-  });
+  //   // fetch('/save', { method: "POST", body: formData }).then((res) => res.json()).then((data) => {
+  //   //   console.log(data);
+  //   //   alert(data["msg"]);
+  //   // });
+  // });
 </script>
