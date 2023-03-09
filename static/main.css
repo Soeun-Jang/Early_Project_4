@@ -1,9 +1,17 @@
+@font-face {
+    font-family: 'SBAggroB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
     margin: 0px;
     padding: 0px;
     list-style: none;
     box-sizing: border-box;
-    font-family: 'Black Han Sans', sans-serif;
+    /* font-family: 'Black Han Sans', sans-serif; */
+    font-family: 'SBAggroB';
     color: rgba(220, 20, 60, 1);
     text-decoration: none;
     font-size: 20px;
@@ -114,7 +122,7 @@ html, body {
     color: rgba(220, 20, 60, 1);
 }
 
-.middle, .add_middle {
+.middle {
     position: relative;
     width: 1070px;
     height: 330px;
@@ -123,6 +131,17 @@ html, body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+}
+
+.add_middle {
+    position: relative;
+    width: 1070px;
+    height: 330px;
+    margin: 30px auto 20px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
 }
 
 .middle2, .add_middle2 {
@@ -221,6 +240,7 @@ html, body {
 .list3 > li > a > p, 
 .list4 > li > a > p {
     text-align: center;
+    font-size: 16px;
 }
 
 .img_box {
@@ -509,7 +529,7 @@ input[required]+label:after {
 }
 
 .input_area > section:nth-child(5) > .form-select{
-    margin-right: 167px;
+    margin-right: 160px;
     padding: 13px 0px;
     border-radius: 7px;
     border: none;

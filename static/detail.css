@@ -1,9 +1,17 @@
+@font-face {
+  font-family: 'SBAggroB';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroB.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   list-style: none;
   box-sizing: border-box;
-  font-family: 'Black Han Sans', sans-serif;
+  /* font-family: 'Black Han Sans', sans-serif; */
+  font-family: 'SBAggroB';
   color: rgba(70, 70, 70, 1);
   text-decoration: none;
   font-size: 20px;
@@ -100,7 +108,7 @@ html, body {
 }
 
 .dummy-column > div:nth-child(1) {
-  font-size: 60px;
+  font-size: 50px;
   color: rgba(70, 70, 70, 1);
 }
 
@@ -338,6 +346,7 @@ html, body {
 
 .reviewTitle > p {
   font-size: 50px;
+  color: rgba(220, 20, 60, 1);
 }
 
 .rdMiddle1 {
@@ -358,6 +367,7 @@ html, body {
 
 .rdMiddle1 > div > label {
   font-size: 30px;
+  color: rgba(220, 20, 60, 1);
 }
 
 .rdMiddle1 > div > input {
@@ -368,6 +378,14 @@ html, body {
   border-radius: 7px;
   border: none;
   outline: 2px solid rgba(220, 20, 60, 0.5);
+}
+
+.starPoint > select {
+  color: rgba(220, 20, 60, 1);
+}
+
+.form-select > option:nth-child(1) {
+  color: rgba(220, 20, 60, 1);
 }
 
 .form-select {
@@ -396,11 +414,12 @@ html, body {
   align-items: flex-start;
 }
 
-.rdMiddle2 > div > label {
+.reviewc > label {
   font-size: 30px;
+  color: rgba(220, 20, 60, 1);
 }
 
-.rdMiddle2 > div > input {
+.reviewc > textarea {
   width: 420px;
   height: 200px;
   font-size: 16px;
